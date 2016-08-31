@@ -1,0 +1,49 @@
+1466901006529	Rename method 'openCellsNearBlank'
+1466910446378	Delete element
+1466910451813	Move files
+1466912030304	Rename resource 'mines_32x32.png'
+1466912298236	Rename field 'btnIcon'
+1466912531688	Delete element
+1466912548814	Rename resource 'flag_32x32_red.png'
+1466912568806	Rename resource 'sudoku_icon'
+1466912585710	Rename resource 'sudoku_icon.png'
+1466927874238	Rename compilation unit 'code.java'
+1466948167181	Rename field 'cells_left'
+1466949813256	Rename method 'openCells'
+1466992987688	Delete element
+1466997082259	Rename local variable 'statusBar'
+1466997092913	Rename local variable 'showTime'
+1467001798198	Rename method 'openCellsWaiting'
+1467006766209	Rename field 'FGCOLOR_NOT_REVEALED'
+1467006827504	Rename method 'setText'
+1467007126390	Rename field 'flagsLeft'
+1467016634877	Rename field 'newGame'
+1467017193264	Rename field 'Level'
+1467020989604	Delete element
+1467023657807	Rename local variable 'cells'
+1467023725168	Rename local variable 'cells'
+1467035384395	Rename method 'showAbout'
+1467038884823	Rename local variable 'mBar'
+1467039024212	Rename local variable 'mevels'
+1467039320981	Rename local variable 'mLevel'
+1467074677862	Rename method 'about'
+1467075592302	Rename field 'time'
+1467075908006	Rename field 'easy'
+1467075921471	Rename field 'medium'
+1467075940448	Rename field 'difficult'
+1467076300091	Rename local variable 'constructor'
+1467077720120	Rename resource 'construction'
+1467105178463	Rename field 'ROWS'
+1467105186725	Rename field 'COLS'
+1467105217910	Rename field 'CELL_SIZE'
+1467105229761	Rename field 'CANVAS_WIDTH'
+1467105251281	Rename field 'CANVAS_HEIGH'
+1467177538732	Move compilation unit
+1467177605680	Move compilation unit
+1467177622158	Move compilation unit
+1467177767378	Copy file
+1467178261257	Move compilation unit
+1467178276445	Move compilation unit
+1467178308632	Move source folder
+1467178346592	Delete element
+1467178629016	Move compilation unit

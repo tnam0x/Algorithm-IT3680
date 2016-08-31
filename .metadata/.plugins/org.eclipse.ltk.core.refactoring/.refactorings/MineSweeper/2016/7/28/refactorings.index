@@ -1,0 +1,16 @@
+1467802143645	Rename local variable 'parent'
+1467814178595	Rename type 'HighScore'
+1467814289229	Rename method 'contextLevelsMenu'
+1467870094943	Rename resource 'minesweeper construction'
+1468031854270	Rename local variable 'reset'
+1468056147187	Rename method 'ButtonListener'
+1468056355812	Rename local variable 'resetBtn'
+1468056576975	Rename method 'getAbout'
+1468057116645	Rename resource 'minesweeper instructions'
+1468060165953	Rename local variable 'panel'
+1468061841704	Rename local variable 'e1'
+1468063078803	Move compilation unit
+1468063209314	Copy compilation unit
+1468075154961	Rename field 'FONT_TOP_PANEL'
+1468075169909	Rename field 'FONT'
+1468075214517	Rename field 'FONT_AREA'

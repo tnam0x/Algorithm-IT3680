@@ -1,0 +1,139 @@
+2016-06-21 15:41:20,958 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @86870ms
+2016-06-21 15:41:21,392 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-06-21 15:41:21,503 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e34feb8{/help,null,AVAILABLE}
+2016-06-21 15:41:21,676 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@1fa8f472{HTTP/1.1}{127.0.0.1:57693}
+2016-06-21 15:41:21,677 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @87615ms
+2016-06-21 16:06:21,917 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@1fa8f472{HTTP/1.1}{127.0.0.1:0}
+2016-06-21 16:06:21,971 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e34feb8{/help,null,UNAVAILABLE}
+2016-06-21 17:27:43,856 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2857888ms
+2016-06-21 17:27:43,957 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-06-21 17:27:44,030 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@51a9049b{/wse,null,AVAILABLE}
+2016-06-21 17:27:44,049 [main] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@f072ede{HTTP/1.1}{0.0.0.0:58028}
+2016-06-21 17:27:44,049 [main] INFO  org.eclipse.jetty.server.Server - Started @2858084ms
+2016-06-21 21:53:51,919 [Framework stop] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@f072ede{HTTP/1.1}{0.0.0.0:0}
+2016-06-21 21:53:51,944 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@51a9049b{/wse,null,UNAVAILABLE}
+2016-07-06 09:29:00,921 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @5218823ms
+2016-07-06 09:29:01,313 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-06 09:29:01,420 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@729440d7{/help,null,AVAILABLE}
+2016-07-06 09:29:01,487 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@18b92ada{HTTP/1.1}{127.0.0.1:52762}
+2016-07-06 09:29:01,488 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @5219405ms
+2016-07-06 13:00:44,160 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@18b92ada{HTTP/1.1}{127.0.0.1:0}
+2016-07-06 13:00:44,196 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@729440d7{/help,null,UNAVAILABLE}
+2016-07-08 22:08:51,806 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @2484571ms
+2016-07-08 22:08:52,298 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-08 22:08:52,452 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@7d9893e6{/help,null,AVAILABLE}
+2016-07-08 22:08:52,521 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@2709af5{HTTP/1.1}{127.0.0.1:61251}
+2016-07-08 22:08:52,523 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @2485308ms
+2016-07-08 22:11:40,843 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@2709af5{HTTP/1.1}{127.0.0.1:0}
+2016-07-08 22:11:40,868 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@7d9893e6{/help,null,UNAVAILABLE}
+2016-07-08 22:22:01,025 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @618538ms
+2016-07-08 22:22:01,196 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-08 22:22:01,254 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@c8a3511{/help,null,AVAILABLE}
+2016-07-08 22:22:01,276 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@7a1450c1{HTTP/1.1}{127.0.0.1:61295}
+2016-07-08 22:22:01,279 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @618796ms
+2016-07-08 22:24:35,212 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@7a1450c1{HTTP/1.1}{127.0.0.1:0}
+2016-07-08 22:24:35,230 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@c8a3511{/help,null,UNAVAILABLE}
+2016-07-09 09:36:29,610 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @190931ms
+2016-07-09 09:36:29,991 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-09 09:36:30,157 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@60e8390e{/help,null,AVAILABLE}
+2016-07-09 09:36:30,222 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@4d4fabc2{HTTP/1.1}{127.0.0.1:62441}
+2016-07-09 09:36:30,222 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @191560ms
+2016-07-09 09:39:26,635 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@4d4fabc2{HTTP/1.1}{127.0.0.1:0}
+2016-07-09 09:39:26,673 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@60e8390e{/help,null,UNAVAILABLE}
+2016-07-09 10:37:42,332 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @189124ms
+2016-07-09 10:37:42,436 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-09 10:37:42,479 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@bd7ba29{/help,null,AVAILABLE}
+2016-07-09 10:37:42,498 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@783913b7{HTTP/1.1}{127.0.0.1:62942}
+2016-07-09 10:37:42,499 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @189295ms
+2016-07-09 15:11:51,574 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@783913b7{HTTP/1.1}{127.0.0.1:0}
+2016-07-09 15:11:51,592 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@bd7ba29{/help,null,UNAVAILABLE}
+2016-07-09 16:16:10,700 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @156292ms
+2016-07-09 16:16:10,814 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-09 16:16:10,855 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3459ecbb{/help,null,AVAILABLE}
+2016-07-09 16:16:10,874 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@d23c262{HTTP/1.1}{127.0.0.1:64083}
+2016-07-09 16:16:10,874 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @156470ms
+2016-07-09 21:50:29,907 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@d23c262{HTTP/1.1}{127.0.0.1:0}
+2016-07-09 21:50:29,926 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3459ecbb{/help,null,UNAVAILABLE}
+2016-07-10 07:49:37,111 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @824151ms
+2016-07-10 07:49:37,593 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-10 07:49:37,736 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@7caf6e01{/help,null,AVAILABLE}
+2016-07-10 07:49:37,849 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@5fe8e3df{HTTP/1.1}{127.0.0.1:49603}
+2016-07-10 07:49:37,850 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @824910ms
+2016-07-10 09:14:09,353 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@5fe8e3df{HTTP/1.1}{127.0.0.1:0}
+2016-07-10 09:14:09,386 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@7caf6e01{/help,null,UNAVAILABLE}
+2016-07-10 20:13:12,441 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @47407ms
+2016-07-10 20:13:12,907 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-10 20:13:13,084 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@427d2db1{/help,null,AVAILABLE}
+2016-07-10 20:13:13,163 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@a347e52{HTTP/1.1}{127.0.0.1:50537}
+2016-07-10 20:13:13,164 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @48146ms
+2016-07-10 21:40:57,368 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@a347e52{HTTP/1.1}{127.0.0.1:0}
+2016-07-10 21:40:57,427 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@427d2db1{/help,null,UNAVAILABLE}
+2016-07-11 01:59:27,539 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @143735ms
+2016-07-11 01:59:27,707 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-11 01:59:27,763 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4785251{/help,null,AVAILABLE}
+2016-07-11 01:59:27,784 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@df8e4c6{HTTP/1.1}{127.0.0.1:53544}
+2016-07-11 01:59:27,784 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @143984ms
+2016-07-11 02:03:17,666 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@df8e4c6{HTTP/1.1}{127.0.0.1:0}
+2016-07-11 02:03:17,686 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4785251{/help,null,UNAVAILABLE}
+2016-07-12 22:55:08,825 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @699498ms
+2016-07-12 22:55:09,217 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-12 22:55:09,372 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3f0c6c99{/help,null,AVAILABLE}
+2016-07-12 22:55:09,435 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@6e5b2d42{HTTP/1.1}{127.0.0.1:54315}
+2016-07-12 22:55:09,435 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @700125ms
+2016-07-13 00:55:45,012 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@6e5b2d42{HTTP/1.1}{127.0.0.1:0}
+2016-07-13 00:55:45,047 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3f0c6c99{/help,null,UNAVAILABLE}
+2016-07-13 10:33:02,267 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @96608ms
+2016-07-13 10:33:03,108 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-13 10:33:03,269 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@30fe3a49{/help,null,AVAILABLE}
+2016-07-13 10:33:03,343 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@7fa69069{HTTP/1.1}{127.0.0.1:57232}
+2016-07-13 10:33:03,344 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @97703ms
+2016-07-13 14:51:03,291 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@7fa69069{HTTP/1.1}{127.0.0.1:0}
+2016-07-13 14:51:03,312 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@30fe3a49{/help,null,UNAVAILABLE}
+2016-07-16 22:13:41,545 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @2220023ms
+2016-07-16 22:13:41,929 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-16 22:13:42,079 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@131fdede{/help,null,AVAILABLE}
+2016-07-16 22:13:42,142 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@51caee7c{HTTP/1.1}{127.0.0.1:59092}
+2016-07-16 22:13:42,142 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @2220642ms
+2016-07-16 23:27:27,576 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@51caee7c{HTTP/1.1}{127.0.0.1:0}
+2016-07-16 23:27:27,621 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@131fdede{/help,null,UNAVAILABLE}
+2016-07-17 20:20:00,120 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @152563ms
+2016-07-17 20:20:00,515 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-07-17 20:20:00,659 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5d49f6be{/help,null,AVAILABLE}
+2016-07-17 20:20:00,714 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@721d618c{HTTP/1.1}{127.0.0.1:54034}
+2016-07-17 20:20:00,715 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @153173ms
+2016-07-17 23:11:21,109 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@721d618c{HTTP/1.1}{127.0.0.1:0}
+2016-07-17 23:11:24,245 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5d49f6be{/help,null,UNAVAILABLE}
+2016-08-11 11:00:12,465 [Worker-21] WARN  o.e.r.models.ModelRepository - Failed to download jre:jre:ctor:zip:1.0.0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not transfer artifact jre:jre:zip:ctor:1.0.0-20150616.145022-6 from/to models (http://download.eclipse.org/recommenders/models/mars/): Premature end of Content-Length delimited message body (expected: 318637; received: 260931
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:294) ~[na:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:192) [org.eclipse.recommenders.models_2.3.0.v20160216-1255.jar:na]
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:174) [org.eclipse.recommenders.models_2.3.0.v20160216-1255.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:165) [org.eclipse.recommenders.models.rcp_2.3.0.v20160216-1255.jar:na]
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76) [org.eclipse.recommenders.models.rcp_2.3.0.v20160216-1255.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact jre:jre:zip:ctor:1.0.0-20150616.145022-6 from/to models (http://download.eclipse.org/recommenders/models/mars/): Premature end of Content-Length delimited message body (expected: 318637; received: 260931
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:43) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67) ~[na:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520) ~[na:na]
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421) ~[na:na]
+	... 8 common frames omitted
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 318637; received: 260931
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:180) ~[na:na]
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137) ~[na:na]
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:150) ~[na:na]
+	at org.eclipse.aether.spi.connector.transport.AbstractTransporter.copy(AbstractTransporter.java:200) ~[org.eclipse.aether.spi_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.spi.connector.transport.AbstractTransporter.utilGet(AbstractTransporter.java:96) ~[org.eclipse.aether.spi_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.transport.http.HttpTransporter.access$100(HttpTransporter.java:72) ~[org.eclipse.aether.transport.http_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.transport.http.HttpTransporter$EntityGetter.handle(HttpTransporter.java:516) ~[org.eclipse.aether.transport.http_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.transport.http.HttpTransporter.execute(HttpTransporter.java:294) ~[org.eclipse.aether.transport.http_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.transport.http.HttpTransporter.implGet(HttpTransporter.java:243) ~[org.eclipse.aether.transport.http_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.spi.connector.transport.AbstractTransporter.get(AbstractTransporter.java:59) ~[org.eclipse.aether.spi_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:447) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:350) ~[org.eclipse.aether.connector.basic_1.0.1.v20141111.jar:na]
+	... 13 common frames omitted

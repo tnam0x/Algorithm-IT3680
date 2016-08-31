@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wb.internal.core.nls.ui.NlsDialog">
+		<item value="341" key="x"/>
+		<item value="683" key="width"/>
+		<item value="184" key="y"/>
+		<item value="369" key="height"/>
+	</section>
+</section>
