@@ -1,0 +1,38 @@
+package day_1;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class WhoServives {
+	public static final int MBS = 1000;
+	public static final int LBS = 10000;
+public static void main(String[] args) {
+	try {
+		System.setIn(new FileInputStream("D:\\input_show_survives.txt"));
+		Scanner scanner = new Scanner(System.in);
+		int numberOfTestCases = Integer.parseInt(scanner.nextLine());
+		if (numberOfTestCases <= 0) {
+			scanner.close();
+			return;
+		}
+		while(numberOfTestCases > 0){
+			int salary = scanner.nextInt();
+			if (!checkBound(salary)) {
+				scanner.close();
+				break;
+			}
+			
+		}
+		scanner.close();
+	} catch (FileNotFoundException e) {
+		System.out.println(e.getMessage());
+	}
+}
+	private static boolean checkBound(int number) {
+		if (MBS <= number && number <= LBS) {
+			return true;
+		}
+		return false;
+	}
+}

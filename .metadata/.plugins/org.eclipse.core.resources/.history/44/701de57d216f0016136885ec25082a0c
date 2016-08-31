@@ -1,0 +1,13 @@
+package day_1;
+
+public class WhoServives {
+	public static final int MBS = 1000;
+	public static final int LBS = 10000;
+
+	private boolean checkBound(int number) {
+		if (MBS <= number && number <= LBS) {
+			return true;
+		}
+		return false;
+	}
+}
