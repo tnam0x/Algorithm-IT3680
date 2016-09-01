@@ -55,9 +55,9 @@
 <fullyQualifiedTypeName name="namtran.hust.QKP"/>
 <fullyQualifiedTypeName name="enumeration.TrafficLightTest.TrafficLight"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="day_1.QuickSort"/>
 <fullyQualifiedTypeName name="java.nio.channels.ScatteringByteChannel"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
