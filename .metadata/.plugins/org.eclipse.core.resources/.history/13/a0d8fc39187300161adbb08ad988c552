@@ -1,0 +1,24 @@
+package day_2;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class InitInput {
+	public static final String PATH_FILE = "D:\\input_sequence.txt";
+	
+	public static void main(String[] args) {
+		Scanner inp = new Scanner(System.in);
+		int numberOfInteger = inp.nextInt();
+		try(PrintWriter writer = new PrintWriter(new FileWriter(PATH_FILE, true), true)) {
+			writer.println(numberOfInteger);
+			for(int i = 0; i < numberOfInteger; i++){
+				
+			}
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		inp.close();
+	}
+}

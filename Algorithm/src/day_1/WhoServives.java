@@ -40,6 +40,7 @@ public class WhoServives {
 			scanner.close();
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
+			System.exit(1);
 		}
 		long endTime = System.currentTimeMillis();
 		System.out.println("Total time: " + (endTime - beginTime) + "ms");
