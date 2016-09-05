@@ -13,8 +13,6 @@ public class Main {
 			inputData[i] = inp.nextInt();
 		}
 		inp.close();
-
-		System.out.println(dynamicProgrammingAlgo(inputData));
 	}
 
 	public static long dynamicProgrammingAlgo(int[] a) {
