@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class InitInput {
 	public static final String PATH_FILE = "D:\\input_sequence.txt";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Scanner inp = new Scanner(System.in);
 		System.out.print("Nhập số phần tử: ");
 		int numberOfInteger = inp.nextInt();

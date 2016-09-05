@@ -1,12 +1,12 @@
 package day_2;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class LargestWeightedSubsequence {
 	public static final String PATH_FILE = "D:\\input_sequence.txt";
+	private static int DISK_BLOCK_SIZE = 4096;
 	public static int[] inputData;
 
 	public static void main(String[] args) {
@@ -19,20 +19,20 @@ public class LargestWeightedSubsequence {
 
 	public static void readInput() {
 		try {
-			System.setIn(new FileInputStream(PATH_FILE));
-			Scanner inp = new Scanner(System.in);
-			int numberOfInteger = Integer.parseInt(inp.nextLine());
-			inputData = new int[numberOfInteger];
-			String line = inp.nextLine();
-			StringTokenizer tokenizer = new StringTokenizer(line, ", ");
+			FileReader fis = new FileReader(PATH_FILE);
+			BufferedReader bis = new BufferedReader(fis, DISK_BLOCK_SIZE);
+			Scanner inp = new Scanner(bis);
+			inp.useDelimiter(", ");
 
-			int i = -1;
-			while (tokenizer.hasMoreTokens()) {
-				i++;
-				inputData[i] = Integer.parseInt(tokenizer.nextToken());
+			int numberOfInteger = Integer.parseInt(inp.nextLine());
+			System.out.println(numberOfInteger);
+			inputData = new int[numberOfInteger];
+
+			for (int i = 0; i < numberOfInteger; i++) {
+				inputData[i] = inp.nextInt();
 			}
 			inp.close();
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.exit(1);
 		}

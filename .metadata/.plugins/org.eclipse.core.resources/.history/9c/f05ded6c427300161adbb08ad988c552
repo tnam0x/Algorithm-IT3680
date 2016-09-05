@@ -1,0 +1,35 @@
+package day_2;
+
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.Random;
+
+public class InitInput {
+	public static final String PATH_FILE = "D:\\input_sequence.txt";
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Nhập số phần tử: ");
+		int numberOfInteger = inp.read() - '0';
+		inp.close();
+		try (PrintWriter writer = new PrintWriter(new FileWriter(PATH_FILE, false), true)) {
+			writer.println(numberOfInteger);
+			Random random = new Random();
+			for (int i = 0; i < numberOfInteger; i++) {
+				String token = "";
+				token += random.nextInt();
+				if (i != numberOfInteger - 1) {
+					token += ", ";
+				}
+				writer.print(token);
+			}
+			System.out.println("Done");
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			System.exit(1);
+		}
+	}
+}
