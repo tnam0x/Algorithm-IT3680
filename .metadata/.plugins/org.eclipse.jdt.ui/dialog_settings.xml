@@ -150,13 +150,13 @@
 	</section>
 	<section name="ProblemSeveritiesConfigurationBlock">
 		<item value="false" key="expanded2"/>
-		<item value="false" key="expanded1"/>
+		<item value="true" key="expanded1"/>
 		<item value="false" key="expanded4"/>
 		<item value="false" key="expanded3"/>
 		<item value="false" key="expanded6"/>
 		<item value="false" key="expanded5"/>
 		<item value="false" key="expanded7"/>
-		<item value="true" key="expanded0"/>
+		<item value="false" key="expanded0"/>
 	</section>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="false" key="OmitCallToSuper"/>
