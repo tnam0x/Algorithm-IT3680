@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class InitInput {
-	public static final String PATH_FILE = "D:\\input_sequence.txt";
+	public static final String PATH_FILE = "/home/namtran/Documents/Algorithm SS2016/input_sequence.txt";
 
 	public static void main(String[] args) throws IOException {
 		Scanner inp = new Scanner(System.in);
