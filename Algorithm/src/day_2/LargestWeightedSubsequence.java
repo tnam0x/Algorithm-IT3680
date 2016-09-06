@@ -5,33 +5,38 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class LargestWeightedSubsequence {
-	public static final String PATH_FILE = "D:\\input_sequence.txt";
+	public static final String PATH_FILE = "input_sequence.txt";
 	private static int DISK_BLOCK_SIZE = 4096;
-	public static int[] inputData;
+	public static int[] inp;
 
 	public static void main(String[] args) {
 		long beginTime = System.currentTimeMillis();
 		readInput();
-		System.out.println(dynamicProgrammingAlgo(inputData));
+		System.out.println(dynamicProgrammingAlgo(inp));
 		long endTime = System.currentTimeMillis();
 		System.out.println(endTime - beginTime + "ms");
 	}
 
 	public static void readInput() {
 		try {
-			FileReader fis = new FileReader(PATH_FILE);
-			BufferedReader bis = new BufferedReader(fis, DISK_BLOCK_SIZE);
-			Scanner inp = new Scanner(bis);
-			inp.useDelimiter(", ");
+			FileReader reader = new FileReader(PATH_FILE);
+			BufferedReader bis = new BufferedReader(reader, DISK_BLOCK_SIZE);
+			Scanner scanner = new Scanner(bis);
+			// FileInputStream fis = new FileInputStream(PATH_FILE);
+			// BufferedInputStream bis = new BufferedInputStream(fis,
+			// DISK_BLOCK_SIZE);
+			// DataInputStream dis = new DataInputStream(bis);
+			// Scanner scanner = new Scanner(dis);
+			scanner.useDelimiter(" ");
 
-			int numberOfInteger = Integer.parseInt(inp.nextLine());
+			int numberOfInteger = Integer.parseInt(scanner.nextLine());
 			System.out.println(numberOfInteger);
-			inputData = new int[numberOfInteger];
+			inp = new int[numberOfInteger];
 
 			for (int i = 0; i < numberOfInteger; i++) {
-				inputData[i] = inp.nextInt();
+				inp[i] = scanner.nextInt();
 			}
-			inp.close();
+			scanner.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.exit(1);
@@ -39,8 +44,8 @@ public class LargestWeightedSubsequence {
 	}
 
 	/**
-	 * Scan all possible subsequences
-	 * Compute and keep the largest weight subsequence
+	 * Scan all possible subsequences Compute and keep the largest weight
+	 * subsequence
 	 */
 	public static long directAlgo(int[] a) {
 		int n = a.length;
@@ -57,8 +62,7 @@ public class LargestWeightedSubsequence {
 	}
 
 	/**
-	 * Quét các dãy con độ dài từ i-n
-	 * Tính toán dãy con có tổng lớn nhất
+	 * Quét các dãy con độ dài từ i-n Tính toán dãy con có tổng lớn nhất
 	 */
 	public static long fasterAlgo(int[] a) {
 		int n = a.length;
@@ -74,11 +78,9 @@ public class LargestWeightedSubsequence {
 	}
 
 	/**
-	 * Divide the sequence into 2 subsequences at the middle s = s1 :: s2
-	 * The largest subsequence might
-	 * be in s1 or
-	 * be in s2 or
-	 * start at some position of s1 and end at some position of s2
+	 * Divide the sequence into 2 subsequences at the middle s = s1 :: s2 The
+	 * largest subsequence might be in s1 or be in s2 or start at some position
+	 * of s1 and end at some position of s2
 	 */
 	public static long devideAndConpuerAlgo(int[] a) {
 		int n = a.length;
@@ -87,7 +89,7 @@ public class LargestWeightedSubsequence {
 
 	private static long maxSequence(int left, int right) {
 		if (left == right) {
-			return inputData[left];
+			return inp[left];
 		}
 		int m = (left + right) / 2;
 		long mSeqLeft = maxSequence(left, m);
@@ -103,33 +105,31 @@ public class LargestWeightedSubsequence {
 	}
 
 	private static long maxLeft(int i, int j) {
-		long maxL = inputData[i];
+		long maxL = inp[i];
 		int sum = 0;
 		for (int k = j; k >= i; k--) {
-			sum += inputData[k];
+			sum += inp[k];
 			maxL = maxL < sum ? sum : maxL;
 		}
 		return maxL;
 	}
 
 	private static long maxRight(int i, int j) {
-		long maxR = inputData[i];
+		long maxR = inp[i];
 		int sum = 0;
 		for (int k = i; k <= j; k++) {
-			sum += inputData[k];
+			sum += inp[k];
 			maxR = maxR < sum ? sum : maxR;
 		}
 		return maxR;
 	}
 
 	/**
-	 * General Principle
-	 * Division: divide the initial problem into smaller similar problems
-	 * (subproblems)
-	 * Storing solutions to subproblems: store the solution to subproblems into
-	 * memory
-	 * Aggregation: establish the solution to the initial problem by aggregating
-	 * solutions to subproblems stored in the memory
+	 * General Principle Division: divide the initial problem into smaller
+	 * similar problems (subproblems) Storing solutions to subproblems: store
+	 * the solution to subproblems into memory Aggregation: establish the
+	 * solution to the initial problem by aggregating solutions to subproblems
+	 * stored in the memory
 	 */
 	public static long dynamicProgrammingAlgo(int[] a) {
 		int n = a.length;
