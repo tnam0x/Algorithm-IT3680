@@ -1,0 +1,14 @@
+package day_4;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String string = "abc";
+		if (string.contains('a' + "")) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+	}
+
+}

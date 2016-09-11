@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		int[] inputData;
 		Scanner inp = new Scanner(System.in);
-		int numberOfInteger = Integer.parseInt(inp.nextLine());
+		int numberOfInteger = inp.nextInt();
 		inputData = new int[numberOfInteger];
 
 		for (int i = 0; i < numberOfInteger; i++) {

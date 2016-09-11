@@ -13,36 +13,15 @@ public class Main {
 		}
 		scanner.close();
 
-		sort(inp, 0, inp.length - 1);
+		sort(inp, inp.length);
 		for (int i = 0; i < n; i++) {
-			System.out.print(inp[i] + " ");
-		}
-	}
-	public static void sort(float a[], int left, int right) {
-		int i = left, j = right;
-		float x = a[(left + right) / 2];
-		do {
-			// tìm phần tử sai vị trí
-			while (a[i] < x)
-				i++;
-			while (a[j] > x)
-				j--;
-			// Hoán đổi nếu i nằm trước j
-			if (i <= j) {
-				float temp = a[i];
-				a[i] = a[j];
-				a[j] = temp;
-				i++;
-				j--;
+			System.out.print(inp[i]);
+			if (i != n - 1) {
+				System.out.print(" ");
 			}
-		} while (i < j);
-		if (left < j) {
-			sort(a, left, j);
-		}
-		if (right > i) {
-			sort(a, i, right);
 		}
 	}
+
 	public static void sort(float[] a, int n) {
 		int gap = n;
 		float shrink = 1.3f;

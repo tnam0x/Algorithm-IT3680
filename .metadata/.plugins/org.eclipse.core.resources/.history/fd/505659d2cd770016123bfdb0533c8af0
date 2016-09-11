@@ -1,0 +1,16 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class RockPaperScissorsTournament {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("D:\\input_RPS.txt"));
+		Scanner scanner = new Scanner(System.in);
+		
+		scanner.close();
+	}
+
+}

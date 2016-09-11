@@ -1,0 +1,37 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class EightQueens {
+	private static boolean[][] board = new boolean[8][8];
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// Khoi tao gia tri ban dau
+		for (int row = 0; row < 8; row++) {
+			for (int col = 0; col < 8; col++) {
+				board[row][col] = true;
+			}
+		}
+
+		// Doc tung dong, kiem tra tung dong
+		System.setIn(new FileInputStream("input_8queens.txt"));
+		Scanner scanner = new Scanner(System.in);
+		boolean isValid = true;
+		for (int row = 0; row < 8; row++) {
+			String line = scanner.nextLine();
+			for (int col = 0; col < 8; col++) {
+				int numChar = 0;
+				if (line.charAt(col) == '*') {
+					numChar++;
+					board[row][col] = true;
+					if (numChar > 1) {
+						isValid = false;
+						break;
+					}
+				}
+			}
+		}
+	}
+}

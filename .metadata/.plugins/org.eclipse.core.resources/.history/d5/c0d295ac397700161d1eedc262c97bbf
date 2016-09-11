@@ -1,0 +1,10 @@
+package day_4;
+
+import java.io.FileNotFoundException;
+
+public class EightQueens {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+	}
+}

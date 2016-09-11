@@ -1,0 +1,16 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		Scanner scanner = new Scanner(new FileInputStream("D:\\CombSort\\Test01\\CombSort.inp"));
+		float f = scanner.nextFloat();
+		scanner.useRadix(1);
+		System.err.println(f);
+		scanner.close();
+	}
+}

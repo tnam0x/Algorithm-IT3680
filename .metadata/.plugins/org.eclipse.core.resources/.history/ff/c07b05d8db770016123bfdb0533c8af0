@@ -1,0 +1,13 @@
+package day_4;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String f = scanner.nextLine();
+		System.err.println(Float.parseFloat(f));
+		scanner.close();
+	}
+}

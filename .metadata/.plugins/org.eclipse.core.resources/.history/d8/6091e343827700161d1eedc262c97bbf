@@ -1,0 +1,32 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class T9Spelling {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("D:\\input_t9_spelling.txt"));
+		Scanner scanner = new Scanner(System.in);
+		int numOfTestCase = Integer.parseInt(scanner.nextLine());
+		if (numOfTestCase >= 1 && numOfTestCase <= 100) {
+			for (int i = 0; i < numOfTestCase; i++) {
+				char[] in = scanner.nextLine().toCharArray();
+				if (in.length <= 1000) {
+					String out = "";
+					for (int j = 0; j < in.length; j++) {
+						
+					}
+					System.out.println("Case #" + (i + 1) + ": " + out);
+				}
+			}
+		}
+		scanner.close();
+	}
+
+	// Kiểm tra kí tự thuộc số nào và trả về chuỗi tương ứng
+	public static int[] getNumberPressed(char c) {
+		
+	}
+}

@@ -1,0 +1,70 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class T9Spelling {
+	public static final String TWO = "abc";
+	public static final String THREE = "def";
+	public static final String FOUR = "ghi";
+	public static final String FIVE = "jkl";
+	public static final String SIX = "mno";
+	public static final String SEVEN = "pqrs";
+	public static final String EIGHT = "tuv";
+	public static final String NINE = "wxyz";
+
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("D:\\input_t9_spelling.txt"));
+		Scanner scanner = new Scanner(System.in);
+		int numOfTests = Integer.parseInt(scanner.nextLine());
+		for (int i = 0; i < numOfTests; i++) {
+			char[] cs = scanner.nextLine().toCharArray();
+			System.out.println(cs);
+			if (cs.length == 1) {
+				System.out.println("Case #" + (i + 1) + ": " + getStrings(cs[0]));
+			} else {
+				String out = getStrings(cs[0]);
+				for (int j = 1; j < cs.length; j++) {
+					String s = getStrings(cs[j]);
+					if (out.endsWith(s.charAt(0)+""))) {
+						out += " ";
+					}
+					out += s;
+				}
+				System.out.println("Case #" + (i + 1) + ": " + out);
+			}
+		}
+		scanner.close();
+	}
+
+	public static String getStrings(char c) {
+		if (TWO.contains(c + "")) {
+			return getString(2 + "", TWO.indexOf(c));
+		} else if (THREE.contains(c + "")) {
+			return getString(3 + "", THREE.indexOf(c));
+		} else if (FOUR.contains(c + "")) {
+			return getString(4 + "", FOUR.indexOf(c));
+		} else if (FIVE.contains(c + "")) {
+			return getString(5 + "", FIVE.indexOf(c));
+		} else if (SIX.contains(c + "")) {
+			return getString(6 + "", SIX.indexOf(c));
+		} else if (SEVEN.contains(c + "")) {
+			return getString(7 + "", SEVEN.indexOf(c));
+		} else if (EIGHT.contains(c + "")) {
+			return getString(8 + "", EIGHT.indexOf(c));
+		} else if (NINE.contains(c + "")) {
+			return getString(9 + "", NINE.indexOf(c));
+		} else {
+			return "0";
+		}
+	}
+
+	private static String getString(String number, int position) {
+		String out = "";
+		for (int i = 0; i < position + 1; ++i) {
+			out += number;
+		}
+		return out;
+	}
+}

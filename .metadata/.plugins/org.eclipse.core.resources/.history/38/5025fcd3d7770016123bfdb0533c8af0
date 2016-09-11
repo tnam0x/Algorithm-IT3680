@@ -1,0 +1,13 @@
+package day_4;
+
+import java.text.DecimalFormat;
+import java.util.Random;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		DecimalFormat format = new DecimalFormat("0.00");
+		System.out.println(format.format(0.100));
+	}
+}

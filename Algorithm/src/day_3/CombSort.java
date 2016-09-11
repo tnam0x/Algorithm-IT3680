@@ -1,48 +1,30 @@
 package day_3;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CombSort {
-	public static final String PATH_INPUT_FILE = "combsort.inp";
-	public static final String PATH_OUTPUT_FILE = "combsort.out";
 	private static int DISK_BLOCK_SIZE = 4096;
 
-	public static void main(String[] args) {
-		long beginTime = System.currentTimeMillis();
-		try {
-			FileInputStream fis = new FileInputStream(PATH_INPUT_FILE);
-			BufferedInputStream bis = new BufferedInputStream(fis, DISK_BLOCK_SIZE);
-			DataInputStream dis = new DataInputStream(bis);
-			Scanner scanner = new Scanner(dis);
-			scanner.useDelimiter(" ");
-			int n = Integer.parseInt(scanner.nextLine());
-			float[] inp = new float[n];
-			for (int i = 0; i < n; i++) {
-				inp[i] = scanner.nextFloat();
-			}
-			scanner.close();
-
-			sort(inp, inp.length);
-			FileWriter fw = new FileWriter(PATH_OUTPUT_FILE);
-			BufferedWriter bw = new BufferedWriter(fw, DISK_BLOCK_SIZE);
-			for (int i = 0; i < n; i++) {
-				bw.write(String.valueOf(inp[i]));
-				if (i != n - 1) {
-					bw.write(" ");
-				}
-			}
-			bw.close();
-		} catch (Exception e) {
-			System.out.println(e.toString());
-			System.exit(1);
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis = new FileInputStream("D:\\input.txt");
+		BufferedInputStream bis = new BufferedInputStream(fis, DISK_BLOCK_SIZE);
+		DataInputStream dis = new DataInputStream(bis);
+		Scanner scanner = new Scanner(dis);
+		scanner.useDelimiter(" ");
+		int n = Integer.parseInt(scanner.nextLine());
+		float[] inp = new float[n];
+		for (int i = 0; i < n; i++) {
+			inp[i] = scanner.nextFloat();
 		}
-		long endTime = System.currentTimeMillis();
-		System.out.println(endTime - beginTime + "ms");
+		sort(inp, inp.length);
+		for (int i = 0; i < n; i++) {
+			System.out.print(inp[i] + " ");
+		}
+		scanner.close();
 	}
 
 	public static void sort(float[] a, int n) {
