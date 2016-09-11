@@ -1,6 +1,6 @@
 package sorts;
 
-/** Độ phức tạp là: O (n2) */
+/** Độ phức tạp thuật toán O(n2) */
 public class BubbleSort {
 	public static void main(String[] args) {
 		int[] a = { 1, 5, 3, 13, 9, 31, 4 };

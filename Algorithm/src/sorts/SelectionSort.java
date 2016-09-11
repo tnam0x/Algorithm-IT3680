@@ -1,5 +1,6 @@
 package sorts;
-/** Độ phức tạp là: O (n2) */
+
+/** Độ phức tạp thuật toán O(n2) */
 public class SelectionSort {
 	public static void main(String[] args) {
 		int[] a = { 1, 5, 3, 13, 9, 31, 4 };
@@ -15,7 +16,7 @@ public class SelectionSort {
 			int max = a[i]; // Lưu phần tử lớn nhất
 			int index = i; // lưu vị trí chứa phần tử lớn nhất
 			// Tìm phần tử lớn nhất
-			for (int j = i+1; j < a.length; j++) {
+			for (int j = i + 1; j < a.length; j++) {
 				if (max < a[j]) {
 					max = a[j];
 					index = j;
