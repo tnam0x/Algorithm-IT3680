@@ -1,17 +1,16 @@
 package day_2;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Add {
 
-	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("D:\\input.txt"));
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int a = scanner.nextInt();
-		int b = scanner.nextInt();
-		System.out.println(a + b);
+		int a = Integer.parseInt(scanner.nextLine());
+		int b = Integer.parseInt(scanner.nextLine());
+		if (a <= 200 && b <= 200) {
+			System.out.println(a + b);
+		}
 		scanner.close();
 	}
 }
