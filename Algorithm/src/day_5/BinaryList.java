@@ -60,12 +60,12 @@ public class BinaryList {
 		n = scanner.nextInt();
 		k = scanner.nextInt();
 		i = scanner.nextInt();
-		if (n <= 10000 && k <= 10000 && i <= 10000) {
-			list();
-			if (!isSuccess) {
-				System.out.println(-1);
-			}
+		// if (n <= 10000 && k <= 10000 && i <= 10000) {
+		list();
+		if (!isSuccess) {
+			System.out.println(-1);
 		}
+		// }
 		scanner.close();
 	}
 
