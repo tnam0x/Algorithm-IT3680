@@ -17,7 +17,7 @@ public class BinaryList {
 				int numberOfZero = 0;
 				token = "";
 				for (int l = 0; l < n; l++) {
-					token += String.valueOf(binary[l] + " ");
+					token += binary[l];
 					if (binary[l] == 0) {
 						if (isReset) {
 							isReset = false;
@@ -36,15 +36,18 @@ public class BinaryList {
 				if (isAdd) {
 					index++;
 					if (k == index) {
-						System.out.println(token);
-						isSuccess = true;
-						return;
+						for (int m = 0; m < token.length(); m++) {
+							System.out.print(token.charAt(m) + " ");
+						}
+						//						isSuccess = true;
+						//						return;
+						System.exit(0);
 					}
 				}
 			} else {
-				if (isSuccess) {
-					return;
-				}
+				//				if (isSuccess) {
+				//					return;
+				//				}
 				TRY(j + 1);
 			}
 		}
@@ -60,13 +63,17 @@ public class BinaryList {
 		n = scanner.nextInt();
 		k = scanner.nextInt();
 		i = scanner.nextInt();
-		// if (n <= 10000 && k <= 10000 && i <= 10000) {
-		list();
-		if (!isSuccess) {
-			System.out.println(-1);
-		}
-		// }
 		scanner.close();
+		if (n <= 10000 && k <= 10000 && i <= 10000) {
+			if (Math.pow(2, n) < k) {
+				System.out.println(-1);
+				return;
+			}
+			list();
+			//		if (!isSuccess) {
+			System.out.println(-1);
+			//		}
+		}
 	}
 
 }
