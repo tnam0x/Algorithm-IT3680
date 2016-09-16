@@ -1,11 +1,10 @@
 package day_4;
 
 public class Test {
+	static boolean b;
+	static int n;
 
 	public static void main(String[] args) {
-		String s = "0";
-		if (s.equals("0")) {
-			System.out.println("true");
-		}
+		System.out.println(n);
 	}
 }
