@@ -1,13 +1,11 @@
 package sorts;
 
-/**
- * Độ phức tạp thuật toán: trung bình O(nlogn)
- */
+/** Độ phức tạp thuật toán: trung bình O(nlogn) */
 public class MergeSort {
 
 	public static void main(String[] args) {
 		int[] a = { 4, 2, 5, 10, 7, 1, 15, 74, 13, 21 };
-		sort(a, 0, a.length-1);
+		sort(a, 0, a.length - 1);
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}

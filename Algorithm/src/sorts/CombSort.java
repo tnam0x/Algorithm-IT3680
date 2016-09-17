@@ -1,9 +1,7 @@
 package sorts;
 
 /**
- * Độ phức tạp thuật toán
- * trung bình: O(nlog(n))
- * xấu nhất: O(n)
+ * Độ phức tạp thuật toán: trung bình O(nlog(n)) - xấu nhất: O(n)
  */
 public class CombSort {
 	public static void main(String[] args) {

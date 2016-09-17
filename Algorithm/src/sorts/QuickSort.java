@@ -1,9 +1,7 @@
 package sorts;
 
 /**
- * Độ phức tạp thuật toán
- * trung bình: O(nlogn)
- * xấu nhất: O(n^2)
+ * Độ phức tạp thuật toán: trung bình O(nlogn) - xấu nhất: O(n^2)
  */
 public class QuickSort {
 	public static void sort(int a[], int left, int right) {

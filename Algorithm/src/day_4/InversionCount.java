@@ -9,23 +9,19 @@ public class InversionCount {
 		int numberOfTestCase = scanner.nextInt();
 		for (int i = 0; i < numberOfTestCase; i++) {
 			int size = scanner.nextInt();
-			if (size <= 200000) {
-				int[] a = new int[size];
-				for (int j = 0; j < size; j++) {
-					a[j] = scanner.nextInt();
-					if (a[j] > 10000000) {
-						break;
-					}
-				}
-				System.out.println(sort(a, 0, size - 1));
-				scanner.nextLine();
+			int[] a = new int[size];
+			for (int j = 0; j < size; j++) {
+				a[j] = scanner.nextInt();
 			}
+			long invCount = sort(a, 0, size - 1);
+			System.out.println(invCount);
+			scanner.nextLine();
 		}
 		scanner.close();
 	}
 
-	public static int sort(int array[], int first, int last) {
-		int invCount = 0;
+	static long sort(int array[], int first, int last) {
+		long invCount = 0;
 		if (first < last) {
 			int middle = (first + last) / 2;
 			invCount = sort(array, first, middle);
@@ -35,37 +31,35 @@ public class InversionCount {
 		return invCount;
 	}
 
-	static int merge(int array[], int first, int middle, int last) {
-		int[] temp = new int[last + 1];
-		int first1, last1, first2, last2;
-		int index = first;
-		int invCount = 0;
+	static long merge(int a[], int first, int mid, int last) {
+		long invCount = 0;
+		int sizeL = mid - first + 1;
+		int sizeR = last - mid;
 
-		first1 = first;
-		last1 = middle;
-		first2 = middle + 1;
-		last2 = last;
+		int[] aL = new int[sizeL];
+		int[] aR = new int[sizeR];
 
-		while ((first1 <= last1) && (first2 <= last2)) {
-			if (array[first1] < array[first2]) {
-				temp[index++] = array[first1++];
+		for (int i = 0; i < sizeL; i++) {
+			aL[i] = a[first + i];
+		}
+		for (int i = 0; i < sizeR; i++) {
+			aR[i] = a[mid + 1 + i];
+		}
+
+		int idL = 0, idR = 0, id = first;
+		while (idL < sizeL && idR < sizeR) {
+			if (aL[idL] < aR[idR]) {
+				a[id++] = aL[idL++];
 			} else {
-				temp[index++] = array[first2++];
-				invCount += (last1 - first1 + 1);
+				a[id++] = aR[idR++];
+				invCount += sizeL - idL;
 			}
 		}
 
-		while (first1 <= last1) {
-			temp[index++] = array[first1++];
-		}
-
-		while (first2 <= last2) {
-			temp[index++] = array[first2++];
-		}
-
-		for (index = first; index <= last; index++) {
-			array[index] = temp[index];
-		}
+		while (idL < sizeL)
+			a[id++] = aL[idL++];
+		while (idR < sizeR)
+			a[id++] = aR[idR++];
 		return invCount;
 	}
 }
