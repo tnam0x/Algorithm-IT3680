@@ -1,28 +1,32 @@
 package day_4;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class RockPaperScissorsTournament {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		int n, k, totalGames;
-		Scanner scanner = new Scanner(System.in);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
-			n = scanner.nextInt();
+			String[] line = reader.readLine().split(" ");
+			n = Integer.parseInt(line[0]);
 			if (n == 0) {
 				break;
 			}
-			k = scanner.nextInt();
+			k = Integer.parseInt(line[1]);
 			int[] gamePlayed = new int[n];
 			int[] wins = new int[n];
 			totalGames = k * n * (n - 1) / 2;
 			String m1, m2;
 			int p1, p2;
 			for (int i = 0; i < totalGames; i++) {
-				p1 = scanner.nextInt() - 1;
-				m1 = scanner.next();
-				p2 = scanner.nextInt() - 1;
-				m2 = scanner.next();
+				String[] gameInfo = reader.readLine().split(" ");
+				p1 = Integer.parseInt(gameInfo[0]) - 1;
+				m1 = gameInfo[1];
+				p2 = Integer.parseInt(gameInfo[2]) - 1;
+				m2 = gameInfo[3];
 				if (!m1.equals(m2)) {
 					gamePlayed[p1]++;
 					gamePlayed[p2]++;
@@ -43,7 +47,6 @@ public class RockPaperScissorsTournament {
 			}
 			System.out.println();
 		}
-		scanner.close();
 	}
 
 	static boolean isWinner(String m1, String m2) {

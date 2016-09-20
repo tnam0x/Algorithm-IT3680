@@ -1,35 +1,32 @@
 package day_4;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int numOfTestCase = Integer.parseInt(scanner.nextLine());
-		if (numOfTestCase >= 1 && numOfTestCase <= 100) {
-			for (int i = 0; i < numOfTestCase; i++) {
-				char[] input = scanner.nextLine().toCharArray();
-				if (input.length <= 1000) {
-					int lastNumber = -1;
-					String out = "";
-					int numPressed[];
-					for (int j = 0; j < input.length; j++) {
-						numPressed = getNumberPressed(input[j]);
-						if (lastNumber == numPressed[0]) {
-							out += " ";
-						}
-						while (numPressed[1] >= 0) {
-							out += numPressed[0];
-							numPressed[1]--;
-						}
-						lastNumber = numPressed[0];
-					}
-					System.out.println("Case #" + (i + 1) + ": " + out);
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int numOfTestCase = Integer.parseInt(reader.readLine());
+		for (int i = 0; i < numOfTestCase; i++) {
+			char[] input = reader.readLine().toCharArray();
+			int lastNumber = -1;
+			String out = "";
+			int numPressed[];
+			for (int j = 0; j < input.length; j++) {
+				numPressed = getNumberPressed(input[j]);
+				if (lastNumber == numPressed[0]) {
+					out += " ";
 				}
+				while (numPressed[1] >= 0) {
+					out += numPressed[0];
+					numPressed[1]--;
+				}
+				lastNumber = numPressed[0];
 			}
+			System.out.println("Case #" + (i + 1) + ": " + out);
 		}
-		scanner.close();
 	}
 
 	public static int[] getNumberPressed(char c) {
