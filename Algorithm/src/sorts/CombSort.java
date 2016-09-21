@@ -5,14 +5,14 @@ package sorts;
  */
 public class CombSort {
 	public static void main(String[] args) {
-		float[] a = { 1.33f, 3, 9, 6.24f, 1.32f };
+		int[] a = { 1, 3, 9, 6, 2 };
 		sort(a, a.length);
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + " ");
 		}
 	}
 
-	public static void sort(float[] a, int n) {
+	public static void sort(int[] a, int n) {
 		int gap = n;
 		float shrink = 1.3f;
 		boolean sorted = false;
@@ -30,8 +30,8 @@ public class CombSort {
 
 			// A single " comb " over the input list
 			while (i + gap < n) {
-				if (a[i] > a[i + gap]) {
-					float temp = a[i];
+				if (a[i] < a[i + gap]) {
+					int temp = a[i];
 					a[i] = a[i + gap];
 					a[i + gap] = temp;
 					if (gap == 1) {
