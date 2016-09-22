@@ -1,46 +1,64 @@
 package day_6;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class HoleyNQueens {
-	static boolean[] r, d1, d2;
-	static int[] a;
-	static int n, m;
+	static int[] queens;
+	static boolean[][] holes;
+	static int n, m, count;
 
-	public static void main(String[] args) {
-		n = 4;
-		list();
-	}
-
-	static void list() {
-		a = new int[n+1];
-		r = new boolean[n + 1];
-		d1 = new boolean[2 * n ];
-		d2 = new boolean[2 * n - 1];
-		for (int i = 1; i <= n; i++) {
-			r[i] = true;
-		}
-		for (int i = 1; i <= 2 * n - 1; i++) {
-			d1[i] = true;
-		}
-		for (int i = 2; i <= 2 * n - 2; i++) {
-			d2[i] = true;
-		}
-	}
-
-	static void TRY(int i) {
-		for (int v = 1; v <= n; v++) {
-			if (r[v] && d1[i - v] && d2[i+v]) {
-				a[i] = v;
-				r[v] = false;
-				d1[i - v] = false;
-				d2[i + v] = false;
-				if (i == n) {
-					
-				}else {
-					TRY(i + 1);
+	public static void main(String[] args) throws Exception {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		while (true) {
+			count = 0;
+			String[] line = reader.readLine().split(" ");
+			n = Integer.parseInt(line[0]);
+			m = Integer.parseInt(line[1]);
+			if (n == 0 && m == 0) {
+				break;
+			}
+			queens = new int[n + 1];
+			holes = new boolean[n + 1][n + 1];
+			for (int i = 0; i <= n; i++) {
+				queens[i] = -1;
+				for (int j = 0; j <= n; j++) {
+					holes[i][j] = true;
 				}
-				r[v] = true;
-				d1[i - v] = true;
-				d2[i + v] = true;
+			}
+			// holes
+			for (int i = 0; i < m; i++) {
+				line = reader.readLine().split(" ");
+				int row = Integer.parseInt(line[0]) + 1;
+				int col = Integer.parseInt(line[1]) + 1;
+				holes[row][col] = false;
+			}
+			TRY(1);
+			System.out.println(count);
+		}
+	}
+
+	static boolean candidate(int col, int row) {
+		if (!holes[row][col]) {
+			return false;
+		}
+		for (int j = 1; j <= row - 1; j++) {
+			if (queens[j] == col || Math.abs(queens[j] - col) == Math.abs(j - row)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	static void TRY(int row) {
+		for (int col = 1; col <= n; col++) {
+			if (candidate(col, row)) {
+				queens[row] = col;
+				if (row == n) {
+					count++;
+				} else {
+					TRY(row + 1);
+				}
 			}
 		}
 	}
