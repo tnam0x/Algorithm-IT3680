@@ -5,12 +5,11 @@ import java.io.InputStreamReader;
 
 /**
  * @author namtran
- *
  */
 public class ARRANGE {
-	static int[] a;
 
 	public static void main(String[] args) throws Exception {
+		int[] a;
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int testCases = Integer.parseInt(reader.readLine());
 		for (int i = 0; i < testCases; i++) {
@@ -20,8 +19,29 @@ public class ARRANGE {
 			for (int j = 0; j < amplifiers; j++) {
 				a[j] = Integer.parseInt(line[j]);
 			}
-			sort(a, 0, amplifiers - 1);
-			printf();
+			arrange(a);
+		}
+	}
+
+	static void arrange(int[] a) {
+		int countOne = 0;
+		int[] tmp = new int[100000];
+		int length = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == 1)
+				countOne += 1;
+			else {
+				tmp[length++] = a[i];
+			}
+		}
+		sort(tmp, 0, length - 1);
+		for (int i = 0; i < countOne; i++)
+			System.out.print("1 ");
+		if (length == 2 && tmp[0] == 2 && tmp[1] == 3)
+			System.out.println("2 3");
+		else {
+			for (int i = length - 1; i >= 0; i--)
+				System.out.println(tmp[i] + " ");
 		}
 	}
 
@@ -63,21 +83,5 @@ public class ARRANGE {
 		for (index = first; index <= last; index++) {
 			array[index] = temp[index];
 		}
-	}
-
-	static void printf() {
-		for (int i = 0; i < a.length; i++) {
-			if (a[i] != 1 && a[i] != 2) {
-				break;
-			}
-			System.out.print(a[i] + " ");
-		}
-		for (int i = a.length - 1; i >= 0; i--) {
-			if (a[i] == 1 || a[i] == 2) {
-				break;
-			}
-			System.out.print(a[i] + " ");
-		}
-		System.out.println();
 	}
 }
