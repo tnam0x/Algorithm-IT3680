@@ -18,6 +18,7 @@ public class TravelingSalesman {
 			int j = scanner.nextInt();
 			int c = scanner.nextInt();
 			cost[i][j] = c;
+			System.out.println(c);
 		}
 		scanner.close();
 	}
