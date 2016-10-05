@@ -7,6 +7,7 @@ package day_7;
 public class TravelingSalesman {
 
 	public static void main(String[] args) {
+		System.out.println(123);
 	}
 
 }
