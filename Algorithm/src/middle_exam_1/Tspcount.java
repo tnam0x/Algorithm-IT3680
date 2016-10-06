@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
  * @author Nam Tran
  */
 public class Tspcount {
-	static int n, m, cmin, cost, total, x[], cities[][];
+	static int n, m, cmin, cost, count, x[], cities[][];
 	static boolean[] visited;
 
 	public static void main(String[] args) throws Exception {
@@ -31,7 +31,7 @@ public class Tspcount {
 		x[0] = 0;
 		visited[x[0]] = true;
 		TRY(1);
-		System.out.println(total);
+		System.out.println(count);
 	}
 
 	static void TRY(int k) {
@@ -43,7 +43,7 @@ public class Tspcount {
 					cost += cities[x[k - 1]][x[k]];
 					if (k == n - 1) {
 						if (cost + cities[x[k]][x[0]] <= m) {
-							total++;
+							count++;
 						}
 					} else {
 						int z = cost + (n - k) * cmin;
