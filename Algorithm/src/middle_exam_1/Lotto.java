@@ -44,6 +44,7 @@ public class Lotto {
 		}
 	}
 
+	// Sắp xếp tăng dần
 	public static void sort(int[] a, int n) {
 		int gap = n;
 		float shrink = 1.3f;
