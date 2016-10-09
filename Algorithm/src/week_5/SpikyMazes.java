@@ -8,18 +8,24 @@ import java.util.StringTokenizer;
 
 /**
  * @author Nam Tran
- * <p>
- * Thuat toan: Tim duong trong ma tran
- * - Nhap ma tran, vi tri chua cong vao, tuong chan, bay trong ma tran
- * - Xet vi tri cua cong vao
- * - Tim cac vi tri co the la duong di quanh toa do do. (Khong phai la tuong)
- * - Tai moi vi tri (i,j) su dung thuat toan duyet quay lui
- * + xet 4 diem lan can la ben tren(i-1,j), ben duoi(i+1,j), ben trai(i,j-1), ben phai (i,j+1)
- * + Neu khong phai la tuong => co kha nang di duoc => tiep tuc xet tiep diem do
- * - Trong qua trinh xet duyet cac diem tren duong neu thay so bay vuot qua so lan tranh bay => duong do sai
- * - Duyet het cac con duong co the di den vi tri kho bau x
- * neu so lan tranh bay >= 2 lan so bay (thoa man ca di ca ve) thi me cung do SUCCESS
- * - Neu duyet het cac con duong ma khong thoa man thi me cung do IMPOSSIBLE
+ *         <p>
+ *         Thuat toan: Tim duong trong ma tran.
+ *         Nhap ma tran, vi tri chua cong vao, tuong chan, bay trong ma tran.
+ *         Xet vi tri cua cong vao.
+ *         Tim cac vi tri co the la duong di quanh toa do do. (Khong phai la
+ *         tuong).
+ *         Tai moi vi tri (i,j) su dung thuat toan duyet quay lui:
+ *         + Xet 4 diem lan can la ben tren(i-1,j), ben duoi(i+1,j), ben
+ *         trai(i,j-1), ben phai (i,j+1).
+ *         + Neu khong phai la tuong => co kha nang di duoc => tiep tuc xet tiep
+ *         diem do.
+ *         Trong qua trinh xet duyet cac diem tren duong neu thay so bay vuot
+ *         qua so lan tranh bay => duong do sai.
+ *         Duyet het cac con duong co the di den vi tri kho bau x.
+ *         neu so lan tranh bay >= 2 lan so bay (thoa man ca di ca ve) thi me
+ *         cung do SUCCESS
+ *         Neu duyet het cac con duong ma khong thoa man thi me cung do
+ *         IMPOSSIBLE.
  */
 public class SpikyMazes {
 	static char maze[][];
