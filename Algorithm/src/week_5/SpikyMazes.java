@@ -16,12 +16,12 @@ import java.util.StringTokenizer;
  *         tuong).
  *         Tai moi vi tri (i,j) su dung thuat toan duyet quay lui:
  *         + Xet 4 diem lan can la ben tren(i-1,j), ben duoi(i+1,j), ben
- *         trai(i,j-1), ben phai (i,j+1).
+ *         trai(i,j-1), ben phai(i,j+1).
  *         + Neu khong phai la tuong => co kha nang di duoc => tiep tuc xet tiep
  *         diem do.
  *         Trong qua trinh xet duyet cac diem tren duong neu thay so bay vuot
  *         qua so lan tranh bay => duong do sai.
- *         Duyet het cac con duong co the di den vi tri kho bau x.
+ *         Duyet het cac con duong co the di den vi tri kho bau x,
  *         neu so lan tranh bay >= 2 lan so bay (thoa man ca di ca ve) thi me
  *         cung do SUCCESS
  *         Neu duyet het cac con duong ma khong thoa man thi me cung do
@@ -29,7 +29,7 @@ import java.util.StringTokenizer;
  */
 public class SpikyMazes {
 	static char maze[][];
-	static int n, m, num_s;
+	static int n, m, numOfSpikes;
 	static boolean[][] visited, visited2;
 
 	public static void main(String[] args) throws IOException {
@@ -37,8 +37,8 @@ public class SpikyMazes {
 		StringTokenizer s = new StringTokenizer(reader.readLine());
 		n = Integer.parseInt(s.nextToken());
 		m = Integer.parseInt(s.nextToken());
-		num_s = Integer.parseInt(s.nextToken());
-		int count = num_s;
+		numOfSpikes = Integer.parseInt(s.nextToken());
+		int count = numOfSpikes;
 		ArrayList<Integer> list = new ArrayList<>();
 		maze = new char[n][m];
 		visited = new boolean[n][m];
@@ -46,8 +46,6 @@ public class SpikyMazes {
 		for (int i = 0; i < n; i++) {
 			char[] c = reader.readLine().toCharArray();
 			for (int j = 0; j < m; j++) {
-				visited[i][j] = true;
-				visited2[i][j] = true;
 				maze[i][j] = c[j];
 				if (maze[i][j] == '@')
 					list.add(i * 100 + j);
@@ -61,7 +59,7 @@ public class SpikyMazes {
 	}
 
 	private static void Try(int x, int y, int count, boolean canStop) {
-		visited[x][y] = false;
+		visited[x][y] = true;
 		switch (maze[x][y]) {
 			case 's':
 				count--;
@@ -69,7 +67,7 @@ public class SpikyMazes {
 					canStop = false;
 				break;
 			case 'x':
-				if (2 * count >= num_s) {
+				if (2 * count >= numOfSpikes) {
 					System.out.println("SUCCESS");
 					System.exit(0);
 				} else {
@@ -77,23 +75,23 @@ public class SpikyMazes {
 				}
 				break;
 		}
-		//chon diem tiep theo ben tren
-		if (canStop && x > 0 && maze[x - 1][y] != '#' && maze[x - 1][y] != '@' && visited[x - 1][y])
+		// chon diem tiep theo ben tren
+		if (canStop && x > 0 && maze[x - 1][y] != '#' && maze[x - 1][y] != '@' && !visited[x - 1][y])
 			Try(x - 1, y, count, canStop);
-		//ben duoi
-		if (canStop && x < n - 1 && maze[x + 1][y] != '#' && maze[x + 1][y] != '@' && visited[x + 1][y])
+		// ben duoi
+		if (canStop && x < n - 1 && maze[x + 1][y] != '#' && maze[x + 1][y] != '@' && !visited[x + 1][y])
 			Try(x + 1, y, count, canStop);
-		//ben trai
-		if (canStop && y > 0 && maze[x][y - 1] != '#' && maze[x][y - 1] != '@' && visited[x][y - 1])
+		// ben trai
+		if (canStop && y > 0 && maze[x][y - 1] != '#' && maze[x][y - 1] != '@' && !visited[x][y - 1])
 			Try(x, y - 1, count, canStop);
-		//ben phai
-		if (canStop && y < m - 1 && maze[x][y + 1] != '#' && maze[x][y + 1] != '@' && visited[x][y + 1])
+		// ben phai
+		if (canStop && y < m - 1 && maze[x][y + 1] != '#' && maze[x][y + 1] != '@' && !visited[x][y + 1])
 			Try(x, y + 1, count, canStop);
-		visited[x][y] = true;
+		visited[x][y] = false;
 	}
 
 	private static void Try2(int x, int y, int count, boolean canStop) {
-		visited2[x][y] = false;
+		visited2[x][y] = true;
 		switch (maze[x][y]) {
 			case 's':
 				count--;
@@ -105,18 +103,18 @@ public class SpikyMazes {
 				System.exit(0);
 				break;
 		}
-		//chon diem tiep theo ben tren
-		if (canStop && x > 0 && maze[x - 1][y] != '#' && visited2[x - 1][y])
+		// chon diem tiep theo ben tren
+		if (canStop && x > 0 && maze[x - 1][y] != '#' && !visited2[x - 1][y])
 			Try2(x - 1, y, count, canStop);
-		//ben duoi
-		if (canStop && x < n - 1 && maze[x + 1][y] != '#' && visited2[x + 1][y])
+		// ben duoi
+		if (canStop && x < n - 1 && maze[x + 1][y] != '#' && !visited2[x + 1][y])
 			Try2(x + 1, y, count, canStop);
-		//ben trai
-		if (canStop && y > 0 && maze[x][y - 1] != '#' && visited2[x][y - 1])
+		// ben trai
+		if (canStop && y > 0 && maze[x][y - 1] != '#' && !visited2[x][y - 1])
 			Try2(x, y - 1, count, canStop);
-		//ben phai
-		if (canStop && y < m - 1 && maze[x][y + 1] != '#' && visited2[x][y + 1])
+		// ben phai
+		if (canStop && y < m - 1 && maze[x][y + 1] != '#' && !visited2[x][y + 1])
 			Try2(x, y + 1, count, canStop);
-		visited[x][y] = true;
+		visited[x][y] = false;
 	}
 }
