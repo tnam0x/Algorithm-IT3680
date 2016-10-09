@@ -1,4 +1,4 @@
-package day_8;
+package week_4;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;

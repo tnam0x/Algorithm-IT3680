@@ -1,30 +1,31 @@
-package day_3;
+package week_1;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Scanner;
-
+/**
+* Dung thuat toan CombSort de sap xep
+* Thuat toan sap xep dung he so shrink de tinh khoang cach giua cac phan tu can sap xep
+* Sau moi luot thi shrink duoc chia nho lai, den khi = 1 thi dung lai
+* Khi do day da duoc sap xep
+* Do phuc tap thuat toan: O(n) - O(nlog(n))
+*/
 public class CombSort {
-	private static int DISK_BLOCK_SIZE = 4096;
 
-	public static void main(String[] args) throws IOException {
-		FileInputStream fis = new FileInputStream("D:\\input.txt");
-		BufferedInputStream bis = new BufferedInputStream(fis, DISK_BLOCK_SIZE);
-		DataInputStream dis = new DataInputStream(bis);
-		Scanner scanner = new Scanner(dis);
-		scanner.useDelimiter(" ");
-		int n = Integer.parseInt(scanner.nextLine());
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n = scanner.nextInt();
 		float[] inp = new float[n];
 		for (int i = 0; i < n; i++) {
 			inp[i] = scanner.nextFloat();
 		}
+		scanner.close();
+
 		sort(inp, inp.length);
 		for (int i = 0; i < n; i++) {
-			System.out.print(inp[i] + " ");
+			System.out.print(inp[i]);
+			if (i != n - 1) {
+				System.out.print(" ");
+			}
 		}
-		scanner.close();
 	}
 
 	public static void sort(float[] a, int n) {

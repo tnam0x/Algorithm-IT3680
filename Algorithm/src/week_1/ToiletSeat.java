@@ -1,12 +1,14 @@
-package day_4;
+package week_1;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+* Policy 1: Kiem tra 2 ki tu dau tien de tinh so lan thuc hien, con lai thi cu gap D thi tang so lan thuc hien len 2
+* Policy 2: Tuong tu nhu tren nhung nguoc lai
+* Policy 3: Kiem tra ki tu truoc do va ki tu hien tai khac nhau thi tang so lan thuc hien len 1
+* Do phuc tap thuat toan: 
+*/
 public class ToiletSeat {
-	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("D:\\input_toilet_seat.txt"));
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		char[] input = scanner.nextLine().toCharArray();
 		int length = input.length;

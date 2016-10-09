@@ -1,4 +1,4 @@
-package day_6;
+package week_3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
  * @author namtr
  */
 public class EZSUDOKU {
-	static int[][] matrix = new int[8][8];
+	static int[][] matrix;
 	static boolean flag;
 
 	public static void main(String[] args) throws Exception {
@@ -15,7 +15,7 @@ public class EZSUDOKU {
 		int testCases = Integer.parseInt(reader.readLine());
 		for (int test = 1; test <= testCases; test++) {
 			int startX = -1, startY = -1;
-			// Đọc ma trận
+			matrix = new int[8][8];
 			for (int i = 0; i < 8; i++) {
 				String[] rows = reader.readLine().split(" ");
 				for (int j = 0; j < 8; j++) {
@@ -30,7 +30,7 @@ public class EZSUDOKU {
 				reader.readLine();
 			}
 			flag = false;
-			if (checkAllBlocks() && checkAllRowsCols()) { // Ma trận hợp lệ
+			if (checkAllBlocks() && checkAllRowsCols()) {
 				TRY(startX, startY);
 				if (flag) {
 					System.out.println("Test case #" + test + ": YES");
@@ -49,9 +49,8 @@ public class EZSUDOKU {
 		}
 	}
 
-	// Điền số còn thiếu vào vị trí (x,y) = 0
 	static void TRY(int x, int y) {
-		if (x >= 8) { // Thoát khi đã duyệt xong ma trận
+		if (x >= 8) {
 			flag = true;
 			return;
 		}
@@ -59,19 +58,19 @@ public class EZSUDOKU {
 			if (y < 7) {
 				TRY(x, y + 1);
 			} else {
-				TRY(x + 1, 0); // Xuống hàng mới
+				TRY(x + 1, 0); // Xuống dòng
 			}
 		} else {
 			for (int i = 1; i <= 8; i++) {
 				matrix[x][y] = i;
-				if (checkRowCol(x, y) && checkBlocks(x, y)) { // Hợp lệ
-					if (y < 7) { // Chưa duyệt hết hàng
+				if (checkRowCol(x, y) && checkBlocks(x, y)) {
+					if (y < 7) {
 						TRY(x, y + 1);
 					} else {
-						TRY(x + 1, 0); // Xuống hàng mới
+						TRY(x + 1, 0); // Xuống dòng
 					}
 				}
-				if (flag) { // Thoát khi đã duyệt xong ma trận
+				if (flag) {
 					return;
 				}
 				matrix[x][y] = 0;
@@ -108,7 +107,6 @@ public class EZSUDOKU {
 		return false;
 	}
 
-	// Kiểm tra vị trí giá trị tại (x,y) đã tồn tại hay không
 	static boolean checkRowCol(int x, int y) {
 		int[] rows = new int[9];
 		int[] cols = new int[9];

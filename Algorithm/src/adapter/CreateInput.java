@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
 
-public class InitInput {
+public class CreateInput {
 	public static final String PATH_OUTPUT_FILE = "D:\\ToiletSeat\\Test";
 
 	public static void main(String[] args) throws IOException {
