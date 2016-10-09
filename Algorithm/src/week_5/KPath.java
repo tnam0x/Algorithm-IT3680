@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * @author Nam Tran
  *         <p>
+ *         Code tham khao.
  *         Thuat toan duyet het cac canh co the chua cac node tu 1..n.
  *         Dung mot vong for de chon canh bat dau duyet.
  *         Moi lan duyet duoc k canh thi tang count.

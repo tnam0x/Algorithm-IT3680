@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 /**
  * @author Nam Tran
  *         <p>
+ *         Code tham khao.
  *         Thuat toan: Tim duong trong ma tran.
  *         Nhap ma tran, vi tri chua cong vao, tuong chan, bay trong ma tran.
  *         Xet vi tri cua cong vao.
@@ -26,6 +27,8 @@ import java.util.StringTokenizer;
  *         cung do SUCCESS
  *         Neu duyet het cac con duong ma khong thoa man thi me cung do
  *         IMPOSSIBLE.
+ *         <p>
+ *         Do phuc tap thuat toan: O(n x m)
  */
 public class SpikyMazes {
 	static char maze[][];
