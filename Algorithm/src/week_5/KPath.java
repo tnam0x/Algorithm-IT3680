@@ -11,7 +11,7 @@ import java.util.Scanner;
  *         Moi lan duyet duoc k canh thi tang count.
  *         Ket thuc thi in ra man hinh count.
  *         <p>
- *         Do phuc tap thuat toan: O(n^2)
+ *         Do phuc tap thuat toan: O(n^n)
  */
 public class KPath {
 	static int n, k, m, count;
