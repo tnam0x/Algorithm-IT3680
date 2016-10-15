@@ -14,10 +14,10 @@ public class MakingJumps {
 	static int best_c;
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer s = new StringTokenizer(in.readLine(), " ");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer s = new StringTokenizer(reader.readLine(), " ");
 		int n = Integer.parseInt(s.nextToken());
-		int x, y, case_num = 1, x_f = 0, y_f = 0;
+		int x, y, case_num = 1, startX = 0, startY = 0;
 		while (n != 0) {
 			//input
 			int count = 0;
@@ -33,8 +33,8 @@ public class MakingJumps {
 							board[i][j] = false;
 						}
 						if (f) {
-							x_f = i;
-							y_f = j;
+							startX = i;
+							startY = j;
 							f = false;
 						}
 					}
@@ -47,7 +47,7 @@ public class MakingJumps {
 			}
 			//giai thuat
 			best_c = Integer.MAX_VALUE;
-			Try(x_f, y_f, count);
+			Try(startX, startY, count);
 			//ket qua
 			if (best_c == 1) {
 				System.out.println("Case " + case_num + ", 1 square can not be reached.");
@@ -56,7 +56,7 @@ public class MakingJumps {
 			}
 			//next input
 			case_num++;
-			s = new StringTokenizer(in.readLine(), " ");
+			s = new StringTokenizer(reader.readLine(), " ");
 			n = Integer.parseInt(s.nextToken());
 		}
 	}
