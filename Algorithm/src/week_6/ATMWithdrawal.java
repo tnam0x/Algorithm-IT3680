@@ -7,6 +7,8 @@ import java.util.Scanner;
  */
 public class ATMWithdrawal {
 
+	static int[][] base = { { 1, 1 }, { 1, 1 }, { 1, 1 }, { 2, 2 }, { 1, 1 }, { 2, 2 }, { 2, 1 }, { 2, 1 }, { 3, 3 } };
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int testCases = scanner.nextInt();
@@ -18,41 +20,52 @@ public class ATMWithdrawal {
 			int length = 4 * (c + 1);
 			int[] currency = new int[length];
 			int j = length - 1;
-			while (c >= 0) {
+			int k = c;
+			while (k >= 0) {
 				currency[j--] = (int) (5000 * Math.pow(10, c));
 				currency[j--] = (int) (3000 * Math.pow(10, c));
 				currency[j--] = (int) (2000 * Math.pow(10, c));
 				currency[j--] = (int) (1000 * Math.pow(10, c));
-				c--;
-			}
-			// Tìm vị trí bắt đầu duyệt
-			int start = 0;
-			for (int l = length - 1; l >= 0; l--) {
-				if (currency[l] <= W) {
-					start = l;
-					break;
-				}
+				k--;
 			}
 
-			long N = Long.MAX_VALUE; // Số loại tiền rút
+			long N = 0; // Số loại tiền rút
 			int S = 0; // Số cách rút mà cho N ít nhất
-			for (int k2 = start; k2 >= 0; k2--) {
-				int k = k2;
-				long count = 0;
-				long money = W;
-				while (money > 0 && k >= 0) {
-					if (currency[k] <= money) {
-						count += money / currency[k];
-						money = money % currency[k];
+			if (W / currency[length - 1] >= 10) {
+				if (W % currency[length - 1] == 0) {
+					N = W / currency[length - 1];
+					S = 1;
+				} else {
+					long div = W / currency[length - 1], W1, W2;
+					if (div % 2 == 0) {
+						W1 = div * currency[length - 1];
+						W2 = W - W1;
+					} else {
+						W1 = (div - 1) * currency[length - 1];
+						W2 = W - W1;
 					}
-					k--;
+					N += W1 / currency[length - 1];
+					int pos = (int) (W2 / (1000 * Math.pow(10, c)) - 1);
+					N += base[pos][0];
+					S += base[pos][1];
 				}
-				if (money == 0) {
-					if (count < N) {
-						N = count;
-						S = 1;
-					} else if (count == N) {
-						S++;
+			} else {
+				if (W % currency[length - 1] == 0) {
+					N = W / currency[length - 1];
+					S = 1;
+				} else {
+					if (W / currency[length - 1] < 2) {
+						int pos = (int) (W / (1000 * Math.pow(10, c)) - 1);
+						N += base[pos][0];
+						S += base[pos][1];
+					} else {
+						long W1 = (long) (W / (1000 * Math.pow(10, c + 1)));
+						W1 = (long) (W1 * (1000 * Math.pow(10, c + 1)));
+						long W2 = W - W1;
+						N += W1 / currency[length - 1];
+						int pos = (int) (W2 / (1000 * Math.pow(10, c)) - 1);
+						N += base[pos][0];
+						S += base[pos][1];
 					}
 				}
 			}
