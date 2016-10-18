@@ -4,6 +4,14 @@ import java.util.Scanner;
 
 /**
  * @author Nam Tran
+ *         <p>
+ *         Dùng 1 vòng while để tính số tờ tiền cần rút.
+ *         Kiểm tra nếu giá trị tờ tiền <= tiền cần rút thì chia lấy nguyên số
+ *         tiền cần rút cho giá trị tờ tiền,
+ *         chia lấy dư để được số tiền cần rút còn lại, lặp lại đến khi số tiền
+ *         cần rút = 0.
+ *         <p>
+ *         Độ phức tạp thuật toán: O(1)
  */
 public class MoneyChanging {
 

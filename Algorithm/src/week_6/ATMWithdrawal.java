@@ -16,7 +16,7 @@ import java.util.Scanner;
  *         part2 > maxCurrency, part1 chia hết cho maxCurrency,
  *         part2 ta tách như trường hợp trên.
  *         <p>
- *         Độ phức tạp thuật toán: n / 10^3
+ *         Độ phức tạp thuật toán: O(W)
  */
 public class ATMWithdrawal {
 
