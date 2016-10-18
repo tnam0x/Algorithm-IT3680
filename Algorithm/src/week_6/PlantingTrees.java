@@ -20,18 +20,18 @@ public class PlantingTrees {
 		Scanner scanner = new Scanner(System.in);
 		int numSeeds = scanner.nextInt();
 		int seeds[] = new int[numSeeds + 1];
-		for (int i = 1; i <= seeds.length; i++) {
+		for (int i = 1; i <= numSeeds; i++) {
 			seeds[i] = scanner.nextInt();
 		}
-		sort(seeds, 0, numSeeds - 1);
+		sort(seeds, 1, numSeeds);
 		int max = 0;
-		for (int i = 0; i < seeds.length; i++) {
+		for (int i = 1; i <= numSeeds; i++) {
 			int sum = i + seeds[i];
 			if (max < sum) {
 				max = sum;
 			}
 		}
-		System.out.println(max + 2);
+		System.out.println(max + 1);
 		scanner.close();
 	}
 
