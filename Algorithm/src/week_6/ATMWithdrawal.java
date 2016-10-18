@@ -8,8 +8,6 @@ import java.util.Scanner;
  *         Đầu tiên kiểm tra số tiền cần rút, nếu ko là bội của 1000 thì ko cần
  *         tính, nếu là bội của 1000 thì
  *         ta xét các trường hợp:
- *         Nếu chia hết số maxCurrency thì tính được số tiền cần rút và số cách
- *         là 1.
  *         Nếu chia cho maxCurrency < 2 thì ta tách từng số ra rồi so với ma
  *         trận base để xác định số tờ tiền cần rút và số cách.
  *         Trường hợp khác, ta tách thành 2 phần: W = part1 + part2 sao cho
@@ -40,9 +38,7 @@ public class ATMWithdrawal {
 			}
 			if (isValid) {
 				W /= 1000;
-				if (W % maxCurrency == 0) { // Nếu chia hết thì tính đc luôn số tờ cần rút
-					N = W / maxCurrency;
-				} else if (W / maxCurrency < 2) {
+				if (W / maxCurrency < 2) {
 					while (W > 0) { // Tách từng số rồi so với bảng base để tính N, S
 						int number = (int) (W % 10); // number = 1..9
 						W = W / 10;
