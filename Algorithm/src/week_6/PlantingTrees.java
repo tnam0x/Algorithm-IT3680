@@ -11,7 +11,7 @@ import java.util.Scanner;
  *         giống seeds[i] trong mảng.
  *         Số ngày sớm nhất cần tìm sẽ là tổng trên + 1
  *         <p>
- *         Độ phức tạp thuật toán: O(nlogn) - xấu nhất: O(n^2). Do dùng
+ *         Độ phức tạp thuật toán: O(n^2logn). Do dùng
  *         QuickSort để sắp xếp nên độ phức tạp sẽ là của thuật toán sắp xếp đó.
  */
 public class PlantingTrees {
