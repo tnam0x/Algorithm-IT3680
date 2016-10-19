@@ -26,10 +26,11 @@ public class BLOPER {
 		Scanner scanner = new Scanner(System.in);
 		int N = scanner.nextInt();
 		int S = scanner.nextInt();
-		boolean minus[] = new boolean[N + 1];
-		int sum = N * (N + 1) / 2;
+		boolean minus[] = new boolean[N + 1]; // Mảng lưu vị trí đặt dấu trừ
+		int sum = N * (N + 1) / 2; // Tổng dãy số từ 1..N
+		
 		int c = sum - S;
-		if (c % 2 == 1) {
+		if (c % 2 == 1) { // c phải chẵn thì mới tìm được output
 			System.out.print("Impossible");
 		} else {
 			c /= 2;
@@ -47,6 +48,7 @@ public class BLOPER {
 					break;
 				}
 			}
+			// output
 			if (c != 0) {
 				System.out.print("Impossible");
 			} else {
