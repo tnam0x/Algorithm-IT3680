@@ -8,11 +8,13 @@ import java.util.Scanner;
  *         Đầu tiên kiểm tra số tiền cần rút, nếu ko là bội của 1000 thì ko cần
  *         tính, nếu là bội của 1000 thì
  *         ta xét các trường hợp:
- *         Nếu chia cho maxCurrency < 2 thì ta tách từng số ra rồi so với ma
+ *         <ul>
+ *         <li>Nếu chia cho maxCurrency < 2 thì ta tách từng số ra rồi so với ma
  *         trận base để xác định số tờ tiền cần rút và số cách.
- *         Trường hợp khác, ta tách thành 2 phần: W = part1 + part2 sao cho
+ *         <li>Trường hợp khác, ta tách thành 2 phần: W = part1 + part2 sao cho
  *         part2 > maxCurrency, part1 chia hết cho maxCurrency,
  *         part2 ta tách như trường hợp trên.
+ *         </ul>
  *         <p>
  *         Độ phức tạp thuật toán: O(W)
  */
