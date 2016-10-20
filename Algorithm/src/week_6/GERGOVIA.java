@@ -25,11 +25,10 @@ public class GERGOVIA {
 				wines[i] = Integer.parseInt(line[i]);
 			}
 			long amountOfWork = 0;
-			// Do tổng wines = 0 nên khi ko cần cộng amountOfWork ở vị trí N-1
+			// Do tổng wines = 0 nên khi cộng wines đến vị trí N-1 thì tổng = 0, do đó ko cần cộng amountOfWork ở vị trí N-1
 			for (int i = 1; i < N; i++) {
 				wines[i] += wines[i - 1];
 				amountOfWork += (wines[i - 1] >= 0) ? wines[i - 1] : -wines[i - 1];
-				System.out.println(wines[i]);
 			}
 			System.out.println(amountOfWork);
 			N = Integer.parseInt(reader.readLine());
