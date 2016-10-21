@@ -19,6 +19,7 @@ public class MSWBL {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		// input
 		int n = scanner.nextInt();
 		int L1 = scanner.nextInt();
 		int L2 = scanner.nextInt();
@@ -37,6 +38,7 @@ public class MSWBL {
 				}
 			}
 		}
+		// output
 		System.out.println(max);
 		scanner.close();
 	}
