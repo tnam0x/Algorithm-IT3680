@@ -24,6 +24,7 @@ public class BLOPER {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		// input
 		int N = scanner.nextInt();
 		int S = scanner.nextInt();
 		boolean minus[] = new boolean[N + 1]; // Mảng lưu vị trí đặt dấu trừ
