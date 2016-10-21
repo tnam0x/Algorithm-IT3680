@@ -20,6 +20,7 @@ import java.util.Scanner;
  */
 public class ATMWithdrawal {
 
+	// Mảng lưu số tờ tiền (base[i][0]) và số sách rút (base[i][1])
 	static int[][] base = { { 1, 1 }, { 1, 1 }, { 1, 1 }, { 2, 2 }, { 1, 1 }, { 2, 2 }, { 2, 1 }, { 2, 1 }, { 3, 3 } };
 
 	public static void main(String[] args) {
