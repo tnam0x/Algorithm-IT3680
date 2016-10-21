@@ -1,4 +1,4 @@
-package adapter;
+package other;
 
 import java.io.File;
 import java.io.FileWriter;
