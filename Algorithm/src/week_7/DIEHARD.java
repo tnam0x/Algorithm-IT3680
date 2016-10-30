@@ -36,11 +36,11 @@ public class DIEHARD {
 				health += 3;
 				armor += 2;
 				while (true) {
-					if (health > 5 && armor > 10) { // water & air
+					if (health > 5 && armor > 10) { // Di chuyển vào water rồi trở về air
 						health -= 2;
 						armor -= 8;
 						surviveTime += 2;
-					} else if (health > 20 && armor <= 10) { // fire & air
+					} else if (health > 20 && armor <= 10) { // Di chuyển vào fire rồi trở về air
 						health -= 17;
 						armor += 7;
 						surviveTime += 2;
