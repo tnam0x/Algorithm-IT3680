@@ -49,9 +49,6 @@ public class Pie {
 
 	// Kiểm tra thể tích 1 miếng bánh (sizeOfPiece) thì chia ra có đủ số bánh cho mọi người (numberOfFriend) ko
 	static boolean isValid(double sizeOfPiece, double[] a) {
-		if (sizeOfPiece == 0) {
-			return false;
-		}
 		int numberOfPiece = 0; // Số miếng bánh
 		for (int i = 0; i < a.length; i++) {
 			numberOfPiece += (int) (a[i] / sizeOfPiece); // Phải ép kiểu như vậy mới đúng đc
