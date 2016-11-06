@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "title": "Eclipse Automated Error Reporting",
-  "timestamp": 1475638713615,
+  "timestamp": 1478448907092,
   "ttl": 10080,
   "helpUrl": "https://dev.eclipse.org/recommenders/community/aeri/v2/help/",
   "feedbackUrl": "http://ctrlflow.com/automated-error-reporting",
@@ -26,6 +26,7 @@
     "com.cforcoding.*",
     "com.google.*",
     "com.gradleware.tooling.*",
+    "com.mountainminds.eclemma.*",
     "com.naef.*",
     "com.sun.*",
     "java.*",
@@ -35,6 +36,7 @@
     "org.eclipse.*",
     "org.fordiac.*",
     "org.gradle.*",
+    "org.jacoco.*",
     "org.osgi.*",
     "org.slf4j.*",
     "sun.*"
@@ -42,10 +44,12 @@
   "requiredPackages": [
     "com.cforcoding.*",
     "com.gradleware.tooling.*",
+    "com.mountainminds.eclemma.*",
     "com.naef.*",
     "org.eclipse.*",
     "org.fordiac.*",
-    "org.gradle.*"
+    "org.gradle.*",
+    "org.jacoco.*"
   ],
   "acceptOtherPackages": true,
   "acceptUiFreezes": true,
