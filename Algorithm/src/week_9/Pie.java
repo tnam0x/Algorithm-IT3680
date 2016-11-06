@@ -1,4 +1,4 @@
-package week_7;
+package week_9;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,6 +7,15 @@ import java.io.InputStreamReader;
  * @author Nam Tran
  *         <p>
  *         Code tham khảo trên mạng.
+ *         <p>
+ *         Tư tưởng bài toán là đi tìm kích cỡ 1 miếng bánh lớn nhất để chia đủ
+ *         số bánh cho mọi người.
+ *         Ta sẽ chọn 1 số làm kích cỡ 1 miếng bánh, rồi kiểm tra có chia đủ số
+ *         miếng bánh ko.
+ *         Nếu đủ ta gán nó cho 1 biến lưu kích cỡ thỏa mãn, nếu ko ta gán cho 1
+ *         biến lưu kích cỡ max của 1 miếng bánh.
+ *         <p>
+ *         Độ phức tạp thuật toán: O(n)
  */
 public class Pie {
 	static int numberOfFriend;
@@ -22,7 +31,7 @@ public class Pie {
 
 			double[] radii = new double[numberOfPie];
 			String[] line2 = reader.readLine().split(" ");
-			double max = 0;
+			double max = 0; // Chiếc bánh to nhất
 			for (int j = 0; j < numberOfPie; j++) {
 				radii[j] = Integer.parseInt(line2[j]);
 				radii[j] *= radii[j] * Math.PI;
