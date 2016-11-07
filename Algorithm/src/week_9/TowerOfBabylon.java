@@ -31,7 +31,7 @@ public class TowerOfBabylon {
 			x = new int[N];
 			y = new int[N];
 			z = new int[N];
-			dp = new int[N];
+			dp = new int[N]; // Mảng lưu độ cao của tòa tháp với đáy tại vị trí i
 			// Đọc dữ liệu
 			for (int i = 0; i < n; i++) {
 				int a = scanner.nextInt();
@@ -51,7 +51,7 @@ public class TowerOfBabylon {
 				y[j + 2] = a;
 				z[j + 2] = b;
 			}
-			// Sắp xếp x, y, z
+			// Sắp xếp x, y, z theo thứ tự tăng dần của kích thước 2 cạnh đáy
 			sort(N);
 			for (int i = 0; i < N; i++) {
 				System.out.println(x[i] + "-" + y[i] + "-" + z[i]);
@@ -61,11 +61,13 @@ public class TowerOfBabylon {
 			for (int i = 0; i < N; i++) {
 				dp[i] = z[i];
 				for (int j = 0; j < i; j++) {
+					// Nếu 2 cạnh khối trên (khối j) nhỏ hơn 2 cạnh của khối dưới cùng (khối i)
 					if ((x[j] < x[i] && y[j] < y[i]) || (y[j] < x[i] && x[j] < y[i])) {
-						System.out.println(dp[i] + "-" + (dp[j] + z[i]));
+						// Cập nhật độ cao lớn nhất của tòa tháp với đáy tại vị trí i
 						dp[i] = dp[i] > (dp[j] + z[i]) ? dp[i] : (dp[j] + z[i]);
 					}
 				}
+				// Cập nhật độ cao lớn nhất của tòa tháp
 				max = max > dp[i] ? max : dp[i];
 			}
 			System.out.println("Case " + (testCase++) + ": maximum height = " + max);
