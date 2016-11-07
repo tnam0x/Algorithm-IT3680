@@ -15,7 +15,7 @@ import java.util.Scanner;
  *         (x-y-z thì ko được dùng x-z-y dp trùng x).
  *         Khi đó, từ 1 khối ta có thể tạo ra 3 khối. Sắp xếp theo thứ tự tăng
  *         dần sao cho x[j] < x[i] && y[j] < y[i] hoặc y[j] < x[i] && x[j] <
- *         y[i]. Sau đó kiểm tra nếu thỏa mãn điều kiện khối trên có x và y nhở
+ *         y[i]. Sau đó kiểm tra nếu thỏa mãn điều kiện khối trên có x và y nhỏ
  *         hơn khối dưới thì cộng chiều cao lại, sau đó tìm max.
  */
 public class TowerOfBabylon {
