@@ -1,4 +1,4 @@
-package middle_exam_2;
+package midterm_exam_2;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class MINPATH {
 		scanner.close();
 		start = 0;
 		end = n - 1;
-		int max = m; // trọng số lớn nhất
+		int max = m; // trọng số lớn nhất (do trọng số mỗi cạnh là 1)
 
 		leng = new int[n]; // chi phi di tu start --> i
 		visited = new boolean[n]; // danh sach cac diem da xet
