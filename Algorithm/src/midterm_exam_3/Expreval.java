@@ -1,4 +1,4 @@
-package midterm_exam_2;
+package midterm_exam_3;
 
 import java.util.Scanner;
 
@@ -42,6 +42,9 @@ public class Expreval {
 				out += val[i];
 			}
 			out = out % max;
+		}
+		if (out < 0) {
+			out += max;
 		}
 		System.out.println(out);
 		scanner.close();
