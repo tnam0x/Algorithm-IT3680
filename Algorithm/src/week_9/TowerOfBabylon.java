@@ -53,9 +53,6 @@ public class TowerOfBabylon {
 			}
 			// Sắp xếp x, y, z theo thứ tự tăng dần của kích thước 2 cạnh đáy
 			sort(N);
-			for (int i = 0; i < N; i++) {
-				System.out.println(x[i] + "-" + y[i] + "-" + z[i]);
-			}
 			// Tìm độ cao của tòa tháp cao nhất
 			int max = 0;
 			for (int i = 0; i < N; i++) {
