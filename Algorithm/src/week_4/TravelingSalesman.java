@@ -1,6 +1,7 @@
 package week_4;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
  * @author namtran
@@ -11,23 +12,24 @@ public class TravelingSalesman {
 	static boolean[] visited;
 
 	public static void main(String[] args) throws Exception {
-		Scanner scanner = new Scanner(System.in);
-		n = scanner.nextInt();
-		m = scanner.nextInt();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		String[] line = reader.readLine().split(" ");
+		n = Integer.parseInt(line[0]);
+		m = Integer.parseInt(line[1]);
 		cities = new int[n + 1][n + 1];
 		visited = new boolean[n + 1];
 		x = new int[n + 1];
 		cmin = Integer.MAX_VALUE;
 		minCost = Integer.MAX_VALUE;
 		for (int index = 0; index < m; index++) {
-			int i = scanner.nextInt();
-			int j = scanner.nextInt();
-			cities[i][j] = scanner.nextInt();
+			line = reader.readLine().split(" ");
+			int i = Integer.parseInt(line[0]);
+			int j = Integer.parseInt(line[1]);
+			cities[i][j] = Integer.parseInt(line[2]);
 			if (cities[i][j] < cmin) {
 				cmin = cities[i][j];
 			}
 		}
-		scanner.close();
 		x[1] = 1;
 		visited[x[1]] = true;
 		TRY(2);

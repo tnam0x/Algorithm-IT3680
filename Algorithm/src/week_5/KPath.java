@@ -1,5 +1,7 @@
 package week_5;
 
+import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 /**
@@ -17,8 +19,8 @@ public class KPath {
 	static int n, k, m, count;
 	static boolean visited[], G[][];
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) throws Exception {
+		Scanner scanner = new Scanner(new FileInputStream("kpath"));
 		n = scanner.nextInt();
 		k = scanner.nextInt();
 		m = scanner.nextInt();
@@ -37,7 +39,9 @@ public class KPath {
 			Try(0, i);
 			visited[i] = false;
 		}
-		System.out.println(count / 2);
+		FileWriter writer = new FileWriter("kpath");
+		writer.write(String.valueOf(count / 2));
+		writer.close();
 	}
 
 	private static void Try(int i, int x) {

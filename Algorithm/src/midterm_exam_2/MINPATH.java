@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * @author namtran
+ *         <p>
+ *         Tìm độ dài đường đi ngắn nhất
  */
 public class MINPATH {
 	static int n, m, start, end;
