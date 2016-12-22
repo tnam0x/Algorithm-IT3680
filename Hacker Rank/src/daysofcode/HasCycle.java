@@ -1,5 +1,8 @@
 package daysofcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Detect a cycle in a linked list. Note that the head pointer may be 'null'
  * if the list is empty.
@@ -30,6 +33,18 @@ public class HasCycle {
 			fast = fast.next.next;
 		}
 		return true;
+	}
+
+	boolean hasCycle1(Node head) {
+		Set<Node> seen = new HashSet<>();
+		while (head != null) {
+			seen.add(head);
+			head = head.next;
+			if (seen.contains(head)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
