@@ -18,13 +18,3 @@ public class IsBST {
 		return isBSTUtil(node.left, min, node.data - 1) && isBSTUtil(node.right, node.data + 1, max);
 	}
 }
-
-class Node {
-	int data;
-	Node left, right;
-
-	public Node(int item) {
-		data = item;
-		left = right = null;
-	}
-}
