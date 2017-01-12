@@ -1,7 +1,0 @@
-package day_2;
-
-public class InitInput {
-	public static void main(String[] args) {
-
-	}
-}
