@@ -30,7 +30,6 @@ public class Node {
 	}
 
 	public static Node removeDuplicates(Node head) {
-		//Write your code here
 		Node current = head;
 		while (current.next != null) {
 			if (current.data == current.next.data) {
@@ -85,7 +84,7 @@ public class Node {
 		}
 	}
 
-	int getHeight(Node root) {
+	static int getHeight(Node root) {
 		if (root == null) {
 			return -1;
 		}
