@@ -1,7 +1,7 @@
 package daysofcode;
 
 // Kiểm tra Binary Tree có là Binary Search Tree
-public class IsBST {
+public class BST {
 	boolean isBST(Node root) {
 		return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
