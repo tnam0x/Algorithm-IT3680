@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;i&apos; in &apos;day_7.TravelingSalesman.main(...)&apos; to &apos;index&apos;&#x0A;- Original project: &apos;Algorithm&apos;&#x0A;- Original element: &apos;day_7.TravelingSalesman.main(String[]).i&apos;&#x0A;- Renamed element: &apos;i&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;i&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;day_7{TravelingSalesman.java[TravelingSalesman~main~\[QString;@i!291!299!295!295!I!0!false" name="index" references="true" stamp="1475638936260" version="1.0"/>
-</session>

@@ -3,6 +3,9 @@ package daysofcode;
 public class Test {
 
 	public static void main(String[] args) {
-		System.out.println(21 & 1);
+		int c1 = '(';
+		int c2 = ')';
+		System.out.println(c1);
+		System.out.println(c2);
 	}
 }
