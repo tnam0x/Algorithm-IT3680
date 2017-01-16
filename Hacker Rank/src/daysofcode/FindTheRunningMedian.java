@@ -17,13 +17,13 @@ public class FindTheRunningMedian {
 		}
 		in.close();
 
-		// min heap: root is smallest
+		// max heap: root is biggest
 		PriorityQueue<Integer> minHeap = new PriorityQueue<>(new Comparator<Integer>() {
 			public int compare(Integer o1, Integer o2) {
 				return o2 - o1;
 			};
 		});
-		// natural ordering: root is biggest
+		// natural ordering: root is smallest
 		PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
 
 		for (int i : a) {
