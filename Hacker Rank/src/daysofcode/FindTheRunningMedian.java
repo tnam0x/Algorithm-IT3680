@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
+/**
+ * Use PriorityQueue. Priority queue represented as a balanced binary heap.
+ */
 public class FindTheRunningMedian {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
