@@ -7,7 +7,7 @@ import java.util.Set;
  * Detect a cycle in a linked list. Note that the head pointer may be 'null'
  * if the list is empty.
  */
-public class HasCycle {
+public class DetectCycle {
 	/**
 	 * If a loop exists, then the fast pointer will eventually end up behind the
 	 * slow pointer. The fast pointer will then catch up to the slow pointer,
