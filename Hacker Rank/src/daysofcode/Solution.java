@@ -1,59 +1,38 @@
 package daysofcode;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Solution {
-
 	public static void main(String[] args) {
-		MyQueue<Integer> queue = new MyQueue<Integer>();
-
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-
-		for (int i = 0; i < n; i++) {
-			int operation = scan.nextInt();
-			if (operation == 1) { // enqueue
-				queue.enqueue(scan.nextInt());
-			} else if (operation == 2) { // dequeue
-				queue.dequeue();
-			} else if (operation == 3) { // print/peek
-				System.out.println(queue.peek());
+		Scanner input = new Scanner(System.in);
+		int t = input.nextInt();
+		for (int i = 0; i < t; i++) {
+			int m = input.nextInt();
+			int n = input.nextInt();
+			int[] array = new int[n];
+			for (int j = 0; j < n; j++) {
+				array[j] = input.nextInt();
 			}
-		}
-		scan.close();
-	}
-
-}
-
-class MyQueue<E> {
-	Stack<E> stack1;
-	Stack<E> stack2;
-
-	public MyQueue() {
-		this.stack1 = new Stack<>();
-		this.stack2 = new Stack<>();
-	}
-
-	void enqueue(E n) {
-		stack1.push(n);
-	}
-
-	void dequeue() {
-		if (stack2.isEmpty()) {
-			while (!stack1.isEmpty()) {
-				stack2.push(stack1.pop());
+			int[] index = twoSum(array, m);
+			for (int j : index) {
+				System.out.print(j + 1 + " ");
 			}
+			System.out.println();
 		}
-		stack2.pop();
+		input.close();
 	}
 
-	E peek() {
-		if (stack2.isEmpty()) {
-			while (!stack1.isEmpty()) {
-				stack2.push(stack1.pop());
+	static int[] twoSum(int[] nums, int target) {
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int i = 0; i < nums.length; i++) {
+			int complement = target - nums[i];
+			if (map.containsKey(complement)) {
+				return new int[] { map.get(complement), i };
 			}
+			map.put(nums[i], i);
 		}
-		return stack2.peek();
+		throw new IllegalArgumentException("No two sum solution");
 	}
 }
