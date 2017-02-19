@@ -48,7 +48,7 @@ public class InversionCount {
 
 		int idL = 0, idR = 0, id = first;
 		while (idL < sizeL && idR < sizeR) {
-			if (aL[idL] < aR[idR]) {
+			if (aL[idL] <= aR[idR]) {
 				a[id++] = aL[idL++];
 			} else {
 				a[id++] = aR[idR++];
