@@ -20,15 +20,15 @@ public class MergeSort {
 		}
 	}
 
-	static void merge(int array[], int first, int middle, int last) {
-		int[] temp = new int[last + 1];
+	static void merge(int array[], int start, int middle, int end) {
+		int[] temp = new int[end + 1];
 		int first1, last1, first2, last2;
-		int index = first;
+		int index = start;
 
-		first1 = first;
+		first1 = start;
 		last1 = middle;
 		first2 = middle + 1;
-		last2 = last;
+		last2 = end;
 
 		while ((first1 <= last1) && (first2 <= last2)) {
 			if (array[first1] < array[first2]) {
@@ -46,7 +46,7 @@ public class MergeSort {
 			temp[index++] = array[first2++];
 		}
 
-		for (index = first; index <= last; index++) {
+		for (index = start; index <= end; index++) {
 			array[index] = temp[index];
 		}
 	}
