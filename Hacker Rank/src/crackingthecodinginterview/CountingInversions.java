@@ -2,6 +2,9 @@ package crackingthecodinginterview;
 
 import java.util.Scanner;
 
+/**
+ * https://www.hackerrank.com/challenges/ctci-merge-sort
+ */
 public class CountingInversions {
 
 	public static void main(String[] args) {

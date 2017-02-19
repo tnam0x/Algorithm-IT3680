@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * https://www.hackerrank.com/challenges/ctci-recursive-staircase
+ */
 public class ClimbStaircase {
 	static Map<Integer, Integer> map = new HashMap<>();
 
