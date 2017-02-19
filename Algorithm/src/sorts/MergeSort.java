@@ -16,34 +16,33 @@ public class MergeSort {
 			int middle = (first + last) / 2;
 			sort(array, first, middle);
 			sort(array, middle + 1, last);
-			merge(array, first, middle, last);
+			merge(array, first, last);
 		}
 	}
 
-	static void merge(int array[], int start, int middle, int end) {
+	static void merge(int array[], int start, int end) {
 		int[] temp = new int[end + 1];
-		int first1, last1, first2, last2;
+		int middle = (start + end) / 2;
+		int i, j;
 		int index = start;
 
-		first1 = start;
-		last1 = middle;
-		first2 = middle + 1;
-		last2 = end;
+		i = start;
+		j = middle + 1;
 
-		while ((first1 <= last1) && (first2 <= last2)) {
-			if (array[first1] < array[first2]) {
-				temp[index++] = array[first1++];
+		while ((i <= middle) && (j <= end)) {
+			if (array[i] <= array[j]) {
+				temp[index++] = array[i++];
 			} else {
-				temp[index++] = array[first2++];
+				temp[index++] = array[j++];
 			}
 		}
 
-		while (first1 <= last1) {
-			temp[index++] = array[first1++];
+		while (i <= middle) {
+			temp[index++] = array[i++];
 		}
 
-		while (first2 <= last2) {
-			temp[index++] = array[first2++];
+		while (j <= end) {
+			temp[index++] = array[j++];
 		}
 
 		for (index = start; index <= end; index++) {
